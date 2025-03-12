@@ -21,7 +21,7 @@ function Hero() {
                         <p className="text-5xl md:text-6xl font-bold text-neutral-700">Mi nombre es Juan</p>
                         <p className="font-bold text-[25px] md:text-3xl typed "><Type /></p>
                         <p className="text-xl font-bold text-neutral-700">Programador back-end capaz de llevar proyectos que permitan la entrega optimizada y continua al usuario.</p>
-                        <p className=" tracking-tighter bg-gradient-to-r from-yellow-500 via-red-500 to-pink-500 text-transparent bg-clip-text">
+                        <p className=" tracking-tighter t">
                             El desarrollo que he realizado en diversos proyectos personales me permiten cada vez más mejorar como desarrollador.Me gusta la manera como los productos surgen casi de la nada, solo con la disciplina y creatividad.
                         </p>
 
