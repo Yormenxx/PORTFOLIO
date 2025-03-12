@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: inter;
+    font-style: normal;
+    font-display: swap;
+    src: url("./fonts/inter.ttf") ;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+body{
+    font-family:"inter";
+
+}
+
+
+
+.containerMain{
+    position: relative;
+    width: 100%;
+    background-color: rgba(88, 88, 88, 0.404);
+    background: url("https://www.map4.jp/wp-content/uploads/2023/05/AdobeStock_573559036-scaled.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius:15px;
+    padding: 10px;
+    z-index: 2;
+}
+.containerMain::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  background-color: rgba(0, 0, 0, 0.815); 
+  z-index: -1;
+  pointer-events: none; 
+}
+
+.typed{
+        
+    color: #00ec76;
+    font-weight: 700;
+    text-transform: uppercase;
+    overflow: hidden;
+    filter: drop-shadow(0px 0px 1px #06a38c);
+}
+
+
+.textShadow{
+    filter: drop-shadow(3px 3px 3px #06a38c); 
+}
+
+.dot{
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+.buttonFilter{
+  padding:4px 20px;
+  text-transform: capitalize;
+  font-weight: bold;
+  background-color: #181818;
+  border-radius: 10px;
+  color: white;
+  transition: .2s ease-in-out;
+  cursor: pointer;
+}
+.buttonFilter:hover{
+  opacity: 80%;
+
+}
+
+
+
+
+
+
+
+
+
