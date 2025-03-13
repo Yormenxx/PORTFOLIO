@@ -15,11 +15,11 @@ function Services() {
 
 
 
-                <div className="pt-18 px-4 md:px-15 ">
+                <div className="pt-18  md:px-15 ">
 
 
 
-                    <div className="  grid grid-cols-1 py-14 px-6 rounded-2xl" >
+                    <div className="  grid grid-cols-1 py-10 px-6 rounded-2xl" >
 
 
                         <div className="flex flex-col items-center justify-center mx-auto  md:w-[80%] text-center " >
@@ -35,20 +35,20 @@ function Services() {
 
 
 
-                        <div className="grid grid-cols-1 lg:grid-cols-2 items-start place-items-center py-8  space-y-4 space-x-3 md:gap-y-3">
+                        <div className="grid grid-cols-1 lg:grid-cols-2 items-start justify-start place-items-start md:place-items-center py-8  space-y-4  md:gap-y-3">
 
                             {
                                 SERVICES_ITEMS.map((service, index) => (
                                     <motion.div initial={{ opacity: 0, y: 50 }}
-                                        whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1 }} key={index} className="md:w-[70%] relative flex flex-col justify-center  group space-y-3  text-neutral-900   px-3 py-2 rounded-xl ">
-                                        <span className="absolute top-2.5 right-5 text-5xl font-bold text-neutral-300  group-hover:text-[#00ec76] duration-200 ease-in-out">{service.number}</span>
+                                        whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1 }} key={index} className=" relative flex flex-col items-start justify-start   space-y-3  text-neutral-900  py-2 ">
+                                        <span className="absolute top-2.5 right-6 text-2xl md:text-5xl font-bold text-neutral-300  group-hover:text-[#00ec76] duration-200 ease-in-out">{service.number}</span>
 
                                         <div className="flex items-center gap-1">
                                             <div className="text-4xl text-[#00ec76] ">{service.icon}</div>
                                             <h2 className="text-2xl md:text-3xl font-bold  capitalize tracking-tighter group-hover:text-[#00ec76] duration-200 ease-in-out">{service.name}</h2>
                                         </div>
 
-                                        <p className="tracking-wide leading-relaxed" >{service.description}</p>
+                                        <p className="tracking-wide leading-relaxed w-[90%]" >{service.description}</p>
                                     </motion.div>
                                 ))
                             }
