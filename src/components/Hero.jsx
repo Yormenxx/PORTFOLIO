@@ -59,7 +59,7 @@ function Hero() {
 
                             <motion.div variants={FadeUp(0.8)}
                                 initial="initial"
-                                animate="animate" className="flex space-x-3 items-center justify-start">
+                                animate="animate" className="flex space-x-3 items-center justify-center md:justify-start">
                                 <FaReact className="text-4xl text-neutral-600 hover:text-[#00ec76] duration-200 ease-in-out" />
                                 <SiNextdotjs className="text-4xl text-neutral-600 hover:text-[#00ec76] duration-200 ease-in-out" />
                                 <FaPhp className="text-4xl text-neutral-600 hover:text-[#00ec76] duration-200 ease-in-out" />
