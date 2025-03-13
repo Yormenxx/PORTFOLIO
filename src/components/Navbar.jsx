@@ -79,8 +79,8 @@ function Navbar() {
             </ul>
 
             <div className="flex items-center justify-center space-x-2">
-              <a href=""><RiLinkedinBoxFill className="hover:text-[#00ec76] " /></a>
-              <a href=""><RiGithubFill className="hover:text-[#00ec76] " /></a>
+              <a href="https://www.linkedin.com/in/juan-manuel-ortiz-47b93424a/"><RiLinkedinBoxFill className="hover:text-[#00ec76] " /></a>
+              <a href="https://github.com/Yormenxx"><RiGithubFill className="hover:text-[#00ec76] " /></a>
 
               <a href=""><RiMailFill className="hover:text-[#00ec76] " /></a>
 

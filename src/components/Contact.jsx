@@ -28,14 +28,14 @@ function Contact() {
 
                         <div className="flex items-center justify-center space-x-4">
 
-                            <a href=""><FaGithub className="text-4xl text-neutral-200 hover:text-[#00ec76] duration-150 ease-in-out" /></a>
-                            <a href=""> <FaLinkedin className="text-4xl text-neutral-200 hover:text-[#00ec76] duration-150 ease-in-out" /></a>
-                            <a href=""><FaDiscord className="text-4xl text-neutral-200 hover:text-[#00ec76] duration-150 ease-in-out" /></a>
+                            <a href="https://github.com/Yormenxx"><FaGithub className="text-4xl text-neutral-200 hover:text-[#00ec76] duration-150 ease-in-out" /></a>
+                            <a href="https://www.linkedin.com/in/juan-manuel-ortiz-47b93424a/"> <FaLinkedin className="text-4xl text-neutral-200 hover:text-[#00ec76] duration-150 ease-in-out" /></a>
+                            <a href="https://discord.com/users/Juma02#8434"><FaDiscord className="text-4xl text-neutral-200 hover:text-[#00ec76] duration-150 ease-in-out" /></a>
 
                         </div>
                         <div className=" flex items-center justify-center space-x-4">
 
-                            <a href="" className="flex items-center px-4 py-2 bg-[#00ec76] rounded-xl capitalize text-white hover:opacity-60 ease-in-out duration-200  ">Descargar cv <FaFilePdf className="text-xl text-white ml-2" /></a>
+                            <a href="https://drive.google.com/file/d/1T92XR720Znxr0x6xawcy0KJMYcElzASg/view?usp=sharing" target="_blank"  className="flex items-center px-4 py-2 bg-[#00ec76] rounded-xl capitalize text-white hover:opacity-60 ease-in-out duration-200  ">Descargar cv <FaFilePdf className="text-xl text-white ml-2" /></a>
 
 
                             <a href="" className="flex items-center px-4 py-2 bg-white border border-[#00ec76] rounded-xl capaitalize hover:opacity-60 ease-in-out duration-200 text-neutral-700 " >Enviar un mensaje <LuMessageSquareShare className="text-xl text-neutral-700 ml-2" /></a>

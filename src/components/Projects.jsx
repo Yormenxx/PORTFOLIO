@@ -75,7 +75,7 @@ function Projects() {
 
 
                                     <div className="flex items-center text-sm pb-4">
-                                        <a href={item.github.link} className="relative flex items-center gap-1  after:content-[''] after:absolute after:bg-[#00ec76] after:h-[2px] after:w-0 after:left-0 after:-bottom-2.5 after:transition-all after:duration-300 z-50 hover:after:w-full hover:text-[#00ec76] text-lg ">Codigo{item.github.git}</a>
+                                        <a href={item.github.link} target="_blank" className="relative flex items-center gap-1  after:content-[''] after:absolute after:bg-[#00ec76] after:h-[2px] after:w-0 after:left-0 after:-bottom-2.5 after:transition-all after:duration-300 z-50 hover:after:w-full hover:text-[#00ec76] text-lg ">Codigo{item.github.git}</a>
 
                                     </div>
                                 </div>
@@ -152,7 +152,7 @@ function Projects() {
                                                     }
                                                 </div>
                                                 <p className="text-sm tracking-tighter line-clamp-1">{item.description}</p>
-                                                <a href={item.link} className="">{item.src}</a>
+                                                <a href={item.link} target="_blank">{item.src}</a>
 
                                             </motion.div>
                                         ))

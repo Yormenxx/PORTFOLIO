@@ -94,7 +94,7 @@ export const PROJECTS_ITEMS = [
 
          github:{
             git:<FaGithub />,
-            link:"#"
+            link:"https://github.com/Yormenxx/ARCHITECTS--FAN-PAGE"
          },
          preview:{
             prevLink:"#",
@@ -128,10 +128,10 @@ export const PROJECTS_ITEMS = [
 
          github:{
             git:<FaGithub />,
-            link:"#"
+            link:""
          },
          preview:{
-            prevLink:"#",
+            prevLink:"https://github.com/Yormenxx/HALO-WEB-LANDING",
             prev:<FaArrowUpRightFromSquare />
          }
          
@@ -162,7 +162,7 @@ export const PROJECTS_ITEMS = [
 
          github:{
             git:<FaGithub />,
-            link:"#"
+            link:"https://github.com/Yormenxx/HEADPHONE-WEBSITE"
          },
          preview:{
             prevLink:"#",
@@ -200,7 +200,7 @@ export const PROJECTS_ITEMS = [
 
          github:{
             git:<FaGithub />,
-            link:"#"
+            link:"https://github.com/Yormenxx/ALMACEN-DE-LIBROS"
          },
          preview:{
             prevLink:"#",
@@ -232,7 +232,7 @@ export const PROJECTS_ITEMS = [
 
          github:{
             git:<FaGithub />,
-            link:"#"
+            link:"https://github.com/Yormenxx/SAAS-LANDING-WEB"
          },
          preview:{
             prevLink:"#",
@@ -273,7 +273,7 @@ export const PROJECTS_ITEMS = [
 
          github:{
             git:<FaGithub />,
-            link:"#"
+            link:"https://github.com/Yormenxx/SOCKET-CHAT"
          },
          preview:{
             prevLink:"#",
@@ -299,7 +299,7 @@ export const OTHER_PROJECTS = [
                 name:"tailwind"
             }
         ],
-        link:"#",
+        link:"https://github.com/Yormenxx/LEARNING-WEB",
         src:"source code",
         type:"front"
     },
@@ -317,7 +317,7 @@ export const OTHER_PROJECTS = [
                 name:"bootstrap"
             }
         ],
-        link:"#",
+        link:"https://github.com/Yormenxx/PHP-CRUD-ONE",
         src:"source code",
         type:"back"
     },
@@ -332,7 +332,7 @@ export const OTHER_PROJECTS = [
                 name:"typescript"
             }
         ],
-        link:"#",
+        link:"https://github.com/Yormenxx/TS-APP-EXPENSES",
         src:"source code",
         type:"back"
     },
@@ -347,7 +347,7 @@ export const OTHER_PROJECTS = [
                 name:"xampp"
             }
         ],
-        link:"#",
+        link:"https://github.com/Yormenxx/MCU-GETTING-API",
         src:"source code",
         type:"back"
     },
@@ -356,7 +356,7 @@ export const OTHER_PROJECTS = [
     
     {
         id:5,
-        name:"Ourdoor travel",
+        name:"Outdoor travel",
         description:"pagina web inspirada en viajes",
         skill:[
             {
@@ -366,7 +366,7 @@ export const OTHER_PROJECTS = [
                 name:"tailwind"
             }
         ],
-        link:"#",
+        link:"https://github.com/Yormenxx/OUTDOOR-TRAVEL",
         src:"source code",
         type:"front"
     },
@@ -387,7 +387,7 @@ export const OTHER_PROJECTS = [
                 name:"trpc"
             }
         ],
-        link:"#",
+        link:"https://github.com/Yormenxx/TRPC-CRUD",
         src:"source code",
         type:"back"
     },
@@ -408,7 +408,7 @@ export const OTHER_PROJECTS = [
                 name:"chalk"
             }
         ],
-        link:"#",
+        link:"https://github.com/Yormenxx/COMMAND-PASSWORD-GENERATOR",
         src:"source code",
         type:"front"
     },
@@ -427,7 +427,7 @@ export const OTHER_PROJECTS = [
                 name:"tailwind"
             }
         ],
-        link:"#",
+        link:"https://github.com/Yormenxx/MODERN-RESTAURANT",
         src:"source code",
         type:"front"
     },
@@ -443,7 +443,7 @@ export const OTHER_PROJECTS = [
                 name:"tailwind"
             }
         ],
-        link:"#",
+        link:"https://github.com/Yormenxx/CRYPTO-LANDING",
         src:"source code",
         type:"front"
     },
@@ -459,7 +459,7 @@ export const OTHER_PROJECTS = [
                 name:"tailwind"
             }
         ],
-        link:"#",
+        link:"https://github.com/Yormenxx/LANDING-WEB-F",
         src:"source code",
         type:"front"
     },
@@ -476,7 +476,7 @@ export const OTHER_PROJECTS = [
             }
         ],
        
-        link:"#",
+        link:"https://github.com/Yormenxx/VIRTUAL-LANDING",
         src:"source code",
         type:"front"
     }

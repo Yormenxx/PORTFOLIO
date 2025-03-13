@@ -40,7 +40,7 @@ function Services() {
                             {
                                 SERVICES_ITEMS.map((service, index) => (
                                     <motion.div initial={{ opacity: 0, y: 50 }}
-                                        whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1 }} key={index} className=" relative flex flex-col items-start justify-start   space-y-3  text-neutral-900  py-2 ">
+                                        whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1 }} key={index} className=" relative group flex flex-col items-start justify-start   space-y-3  text-neutral-900  py-2 ">
                                         <span className="absolute top-2.5 right-6 text-2xl md:text-5xl font-bold text-neutral-300  group-hover:text-[#00ec76] duration-200 ease-in-out">{service.number}</span>
 
                                         <div className="flex items-center gap-1">
