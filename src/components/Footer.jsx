@@ -36,7 +36,7 @@ function Footer() {
                                 {
                                     NAV_ITEMS.map((item, index) => (
                                         <li key={index}>
-                                            <a href={item.link} className="relative px-3  hover:text-[#00ec76] duration-200 ease-in-out ">{item.name}</a>
+                                            <a href={item.link} className="relative   hover:text-[#00ec76] duration-200 ease-in-out ">{item.name}</a>
                                         </li>
 
                                     ))

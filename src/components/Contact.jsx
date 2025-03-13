@@ -7,7 +7,7 @@ function Contact() {
     return (
         <>
             <span id="contacto"></span>
-            <section className="mx-auto px-14 py-10 ">
+            <section className="mx-auto md:px-14 py-10 ">
 
                 <motion.div initial={{ opacity: 0, x: 50 }}
                             whileInView={{ opacity: 1, x: 0 }} transition={{ duration: .6, ease: "easeInOut" }} className="containerMain flex flex-col justify-center items-center text-white px-10 py-20 rounded-2xl h-[500px] text-center">
@@ -17,7 +17,7 @@ function Contact() {
                         Disponible para nuevos proyectos
                     </div>
 
-                    <h2 className="text-4xl md:text-6xl font-extrabold ">Construyamos algo increible,juntos.</h2>
+                    <h2 className="text-4xl md:text-6xl font-extrabold ">Construyamos algo increible juntos.</h2>
                     <p className="pt-2.5 font-bold leading-relaxed tracking-wider text-neutral-400 w-[70%] ">Puedes comunicarte conmigo en cualquier momento , de acuerdo a los siguientes enlaces, además puedes ver mi hoja de vida si te interesa.</p>
 
               
