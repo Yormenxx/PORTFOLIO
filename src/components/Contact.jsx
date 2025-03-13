@@ -9,8 +9,8 @@ function Contact() {
             <span id="contacto"></span>
             <section className="mx-auto md:px-14 py-10 ">
 
-                <motion.div initial={{ opacity: 0, x: 50 }}
-                            whileInView={{ opacity: 1, x: 0 }} transition={{ duration: .6, ease: "easeInOut" }} className="containerMain flex flex-col justify-center items-center text-white px-10 py-20 rounded-2xl h-[500px] text-center">
+                <motion.div initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .6, ease: "easeInOut" }} className="containerMain flex flex-col justify-center items-center text-white px-10 py-20 rounded-2xl h-[500px] text-center">
 
                     <div className="mx-auto md:mx-0 flex items-center justify-start w-[300px] bg-neutral-700 text-[#00ec76] rounded-lg px-2 my-5">
                         <div className="w-[10px] h-[10px] rounded-full border border-[#00ec76] bg-[#00ec76] mr-3  dot"></div>

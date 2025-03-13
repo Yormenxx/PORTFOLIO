@@ -39,8 +39,8 @@ function Services() {
 
                             {
                                 SERVICES_ITEMS.map((service, index) => (
-                                    <motion.div initial={{ opacity: 0, x: 50 }}
-                                        whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1 }} key={index} className="md:w-[70%] relative flex flex-col justify-center  group space-y-3  text-neutral-900   px-3 py-2 rounded-xl ">
+                                    <motion.div initial={{ opacity: 0, y: 50 }}
+                                        whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1 }} key={index} className="md:w-[70%] relative flex flex-col justify-center  group space-y-3  text-neutral-900   px-3 py-2 rounded-xl ">
                                         <span className="absolute top-2.5 right-5 text-5xl font-bold text-neutral-300  group-hover:text-[#00ec76] duration-200 ease-in-out">{service.number}</span>
 
                                         <div className="flex items-center gap-1">
