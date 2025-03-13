@@ -24,8 +24,7 @@ body{
     background: url("https://www.map4.jp/wp-content/uploads/2023/05/AdobeStock_573559036-scaled.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
-    border-radius:15px;
-    padding: 10px;
+    border-radius: 10px;
     z-index: 2;
 }
 .containerMain::before{
@@ -35,7 +34,7 @@ body{
   left: 0;
   width: 100%;
   height: 100%;
-  border-radius: 15px;
+  border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.815); 
   z-index: -1;
   pointer-events: none; 
