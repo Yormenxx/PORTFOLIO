@@ -2,12 +2,15 @@ import { FaReact, FaPhp, FaLaravel, FaNodeJs } from "react-icons/fa";
 import { RiTailwindCssFill, RiNextjsFill } from "react-icons/ri";
 import { SiMysql, SiMongodb, SiJavascript, SiExpress } from "react-icons/si";
 import Marquee from "react-fast-marquee";
-
+import { FadeUp } from "./Hero"
+import { animate, motion } from "framer-motion"
 function Slider() {
     return (
         <>
 
-            <div className="md:px-12 px-1 mx-auto  w-full md:w-[90%]">
+            <motion.div variants={FadeUp(0.8)}
+    initial="initial"
+    animate="animate" transition={{duration:1}}  className="md:px-12 px-1 mx-auto  w-full md:w-[90%]">
                 <Marquee autoFill pauseOnHover className="py-5">
 
                     <div className="px-4">
@@ -89,7 +92,7 @@ function Slider() {
                     </div>
 
                 </Marquee> */}
-            </div>
+            </motion.div>
 
         </>
     )

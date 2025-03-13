@@ -1,10 +1,12 @@
 import { FaGithub, FaLinkedin, FaDiscord } from "react-icons/fa";
 import { NAV_ITEMS } from "../constants"
+import { motion } from "framer-motion";
 function Footer() {
     return (
         <>
 
-            <footer className="mt-24">
+            <motion.footer initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .6, ease: "easeInOut" }} className="mt-24">
 
                 <div className="max-w-7xl mx-auto px-4 ">
 
@@ -77,7 +79,7 @@ function Footer() {
 
 
 
-            </footer>
+            </motion.footer>
 
 
 

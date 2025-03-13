@@ -2,8 +2,8 @@ import logo from "../assets/juma-bw.webp"
 import { NAV_ITEMS } from "../constants"
 import { RiCloseFill, RiGithubFill, RiLinkedinBoxFill, RiMailFill, RiMenu3Line } from "@remixicon/react"
 import { useState } from "react"
-
-
+import { FadeUp } from "./Hero"
+import { animate, motion } from "framer-motion"
 function Navbar() {
 
   const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false)
@@ -14,7 +14,9 @@ function Navbar() {
 
 
   return (
-    <nav className='fixed w-full z-40   m-3'>
+    <motion.nav variants={FadeUp(0.8)}
+    initial="initial"
+    animate="animate"   className='fixed w-full z-40   m-3'>
 
       <div className='flex justify-between items-center rounded-lg border !backdrop-blur-2xl bg-white/30 border-neutral-200 max-w-[95%] mx-auto px-4 py-2'>
 
@@ -92,7 +94,7 @@ function Navbar() {
       }
 
 
-    </nav>
+    </motion.nav>
   )
 }
 

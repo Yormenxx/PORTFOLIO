@@ -3,7 +3,6 @@ import { PROJECTS_ITEMS, OTHER_PROJECTS } from "../constants"
 import { AnimatePresence, motion } from "framer-motion"
 import { useState } from "react"
 
-import { useContext } from "react";
 
 
 
@@ -31,9 +30,11 @@ function Projects() {
             <div className="w-full m-auto px-4 py-4 ">
                 <div className="max-w-7xl mx-auto px-4 py-10 text-center ">
                     <div className="flex flex-col justify-center items-center space-y-3">
-                        <h2 className=" text-6xl font-extrabold tracking-wider bg-gradient-to-l from-blue-500 via-teal-500 to-green-500 text-transparent bg-clip-text py-2  ">Proyectos</h2>
-                        <p className="w-[60%] leading-relaxed tracking-wide text-lg py-4">Proyectos destacados desarrollados con React, Framer Motion, React Router y Node.js.
-                        Cada aplicación combina interfaces dinámicas, animaciones fluidas y un backend robusto con Express</p>
+                        <motion.h2 initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .6, ease: "easeInOut" }} className=" text-6xl font-extrabold tracking-wider bg-gradient-to-l from-blue-500 via-teal-500 to-green-500 text-transparent bg-clip-text py-2  ">Proyectos</motion.h2>
+                        <motion.p initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .7, ease: "easeInOut" }}  className="w-[60%] leading-relaxed tracking-wide text-lg py-4">Proyectos destacados desarrollados con React, Framer Motion, React Router y Node.js.
+                        Cada aplicación combina interfaces dinámicas, animaciones fluidas y un backend robusto con Express</motion.p>
                     </div>
                 </div>
 
@@ -44,7 +45,8 @@ function Projects() {
 
                         PROJECTS_ITEMS.map((item, index) => (
 
-                            <div key={index} className="relative flex flex-col h-fit  justify-center sm:items-start   w-full transition-all hover:hover:scale-95  rounded-xl">
+                            <motion.div initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .6, ease: "easeInOut" }}  key={index} className="relative flex flex-col h-fit  justify-center sm:items-start   w-full transition-all hover:hover:scale-95  rounded-xl">
 
                                 <figure className=" overflow-hidden rounded-xl h-[250px]">
                                     <img src={item.img} alt="project" className="w-full object-cover" />
@@ -77,7 +79,7 @@ function Projects() {
 
                                     </div>
                                 </div>
-                            </div>
+                            </motion.div>
                         ))
                     }
                 </div>
@@ -86,17 +88,19 @@ function Projects() {
                 <div>
 
                     <div className="max-w-7xl px-4 py-4 text-center pt-5 ">
-                        <div className="mx-auto flex flex-col items-center">
+                        <motion.div initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .6, ease: "easeInOut" }}  className="mx-auto flex flex-col items-center">
                             <h2 className=" text-6xl font-extrabold tracking-wider bg-gradient-to-l from-blue-500 via-teal-500 to-green-500 text-transparent bg-clip-text py-3   ">Otros proyectos</h2>
                             <p className="w-[60%] leading-relaxed tracking-wide text-lg py-4">Estos mini proyectos se realizarón con el fin de integrar, probar o simplemente usar una tecnologia en concreto para poder identificar su funcionamiento.</p>
-                        </div>
+                        </motion.div>
                     </div>
 
 
 
 
 
-                    <div className="flex items-center justify-center gap-3">
+                    <motion.div initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .6, ease: "easeInOut" }}  className="flex items-center justify-center gap-3">
                         <button
 
                             className="buttonFilter"
@@ -105,7 +109,7 @@ function Projects() {
                         <button className="buttonFilter" onClick={() => handleFilterChange('front')}>front</button>
                         <button className="buttonFilter" onClick={() => handleFilterChange('back')}>backend</button>
                         <button className="buttonFilter" onClick={() => handleFilterChange('otro')}>otro</button>
-                    </div>
+                    </motion.div>
 
 
 
@@ -113,7 +117,8 @@ function Projects() {
 
                         <div className="px-4 pb-20 pt-5">
 
-                            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 place-content-center space-x-2 space-y-2 ">
+                            <motion.div initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .6, ease: "easeInOut" }}  className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 place-content-center space-x-2 space-y-2 overflow-hidden">
 
                                 <AnimatePresence>
 
@@ -157,7 +162,7 @@ function Projects() {
 
 
 
-                            </div>
+                            </motion.div>
                         </div>
                     </div>
 
