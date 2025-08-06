@@ -2,7 +2,7 @@
 import { PROJECTS_ITEMS, OTHER_PROJECTS } from "../constants"
 import { AnimatePresence, motion } from "framer-motion"
 import { useState } from "react"
-
+import { PointerHighlight } from "@/components/ui/pointer-highlight";
 
 
 
@@ -10,7 +10,7 @@ function Projects() {
 
     const [filter, setFilter] = useState('TODOS');
 
-    const handleFilterChange = (newFilter) => {
+    const handleFilterChange = (newFilter: any) => {
         setFilter(newFilter);
     };
 
@@ -25,10 +25,11 @@ function Projects() {
 
 
     return (
-        <section className= "mx-4  rounded-2xl  transition-colors duration-500 " >
+        <section className="mx-4  rounded-2xl  transition-colors duration-500  " >
             <span id="proyectos"></span>
-            <div className="w-full m-auto px-4 py-4 ">
-                <div className="max-w-7xl mx-auto px-4 py-10 text-center ">
+            <div className="w-full m-auto px-4  ">
+
+                {/* <div className="max-w-7xl mx-auto px-4 py-10 text-center ">
                     <div className="flex flex-col justify-center items-center space-y-3">
                         <motion.h2 initial={{ opacity: 0, y: 50 }}
                             whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .6, ease: "easeInOut" }} className=" text-4xl md:text-6xl font-extrabold tracking-wider bg-gradient-to-l from-blue-500 via-teal-500 to-green-500 text-transparent bg-clip-text py-2  ">Proyectos</motion.h2>
@@ -36,10 +37,10 @@ function Projects() {
                             whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .7, ease: "easeInOut" }}  className="md:w-[60%] leading-relaxed tracking-wide text-lg py-4">Proyectos destacados desarrollados con React, Framer Motion, React Router y Node.js.
                         Cada aplicación combina interfaces dinámicas, animaciones fluidas y un backend robusto con Express</motion.p>
                     </div>
-                </div>
+                </div> */}
 
 
-                <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center items-start sm:px-2 md:space-y-6 md:px-4 gap-2">
+                {/* <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center items-start sm:px-2 md:space-y-6 md:px-4 gap-2">
 
                     {
 
@@ -82,16 +83,25 @@ function Projects() {
                             </motion.div>
                         ))
                     }
-                </div>
+                </div> */}
 
 
                 <div>
 
-                    <div className="max-w-7xl px-4 py-4 text-center pt-5 ">
+                    <div className="max-w-7xl p-4 text-center pt-5 ">
                         <motion.div initial={{ opacity: 0, y: 50 }}
-                            whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .6, ease: "easeInOut" }}  className="mx-auto flex flex-col items-center">
-                            <h2 className="text-4xl md:text-6xl font-extrabold tracking-wider bg-gradient-to-l from-blue-500 via-teal-500 to-green-500 text-transparent bg-clip-text py-3   ">Otros proyectos</h2>
-                            <p className="md:w-[60%] leading-relaxed tracking-wide text-lg py-4">Estos mini proyectos se realizarón con el fin de integrar, probar o simplemente usar una tecnologia en concreto para poder identificar su funcionamiento.</p>
+                            whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .6, ease: "easeInOut" }} className="flex flex-col text-left">
+                            <div className="mx-auto  ml-20 text-2xl font-bold tracking-tight md:text-5xl text-white">
+
+                                <PointerHighlight
+                                    rectangleClassName="bg-yellow-700 "
+                                    pointerClassName="text-blue-500"
+                                >
+                                    <span className="relative z-10 text-white">Proyectos de software</span>
+                                </PointerHighlight>
+                                realizados
+                            </div>
+                            <p className="md:w-[60%] leading-relaxed ml-20 tracking-wide text-lg py-4 text-neutral-400">Estos mini proyectos se realizarón con el fin de integrar, probar o simplemente usar una tecnologia en concreto para poder identificar su funcionamiento.</p>
                         </motion.div>
                     </div>
 
@@ -100,7 +110,7 @@ function Projects() {
 
 
                     <motion.div initial={{ opacity: 0, y: 50 }}
-                            whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .6, ease: "easeInOut" }}  className="flex items-center justify-center gap-3">
+                        whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .6, ease: "easeInOut" }} className="flex items-center justify-start gap-3  ml-22 ">
                         <button
 
                             className="buttonFilter"
@@ -113,12 +123,12 @@ function Projects() {
 
 
 
-                    <div>
+                    <div className="mt-10">
 
-                        <div className="px-4 pb-20 pt-5">
+                        <div className="px-5 md:px-10 lg:px-20 ">
 
                             <motion.div initial={{ opacity: 0, y: 50 }}
-                            whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .6, ease: "easeInOut" }}  className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 place-content-center space-x-2 space-y-2 overflow-hidden">
+                                whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .6, ease: "easeInOut" }} className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 place-content-center pt-6 space-x-2 space-y-2 overflow-hidden">
 
                                 <AnimatePresence>
 
@@ -135,7 +145,7 @@ function Projects() {
                                                     duration: 0.5,
                                                     ease: "easeInOut",
                                                     delay: 0.1,
-                                                }} className=" border  border-neutral-300 px-5 py-1 rounded-sm project transition-transform duration-300 ease-out 
+                                                }} className=" border  border-neutral-800 px-5 py-1 rounded-sm project transition-transform duration-300 ease-out 
                hover:-translate-y-2 hover:translate-x-2  
                ">
 
@@ -143,16 +153,20 @@ function Projects() {
                                                     <CiFolderOn className="text-3xl text-[#00ec76] " />
                                                     <a href={item.link}><FaGithub className="text-xl" /></a>
                                                 </div> */}
-                                                <h3 className="text-lg font-bold capitalize bg-gradient-to-r from-yellow-500 via-red-500 to-pink-500 text-transparent bg-clip-text">{item.name}</h3>
-                                                <div>
+                                                <h3 className="text-lg font-bold capitalize bg-gradient-to-r
+from-[#4ade80]
+via-[#14b8a6]
+to-[#0891b2] text-transparent bg-clip-text line-clamp-1">{item.name}</h3>
+                                               
+                                                <p className="text- tracking-tighter line-clamp-1 text-neutral-400">{item.description}</p>
+                                                 <div>
                                                     {
                                                         item.skill.map((skill, index) => (
                                                             <span key={index} className="mr-1 text-neutral-600  capitalize   py-1">{skill.name}</span>
                                                         ))
                                                     }
                                                 </div>
-                                                <p className="text-sm tracking-tighter line-clamp-1">{item.description}</p>
-                                                <a href={item.link} target="_blank">{item.src}</a>
+                                                {/* <a href={item.link} target="_blank">{item.src}</a> */}
 
                                             </motion.div>
                                         ))

@@ -2,8 +2,7 @@ import logo from "../assets/juma-bw.webp"
 import { NAV_ITEMS } from "../constants"
 import { RiCloseFill, RiGithubFill, RiLinkedinBoxFill, RiMailFill, RiMenu3Line } from "@remixicon/react"
 import { useState } from "react"
-import { FadeUp } from "./Hero"
-import { animate, motion } from "framer-motion"
+
 function Navbar() {
 
   const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false)
@@ -14,18 +13,21 @@ function Navbar() {
 
 
   return (
-    <motion.nav variants={FadeUp(0.8)}
-    initial="initial"
-    animate="animate"   className='fixed w-full z-40   m-3'>
+    <nav className='fixed w-full z-40   m-3'>
 
-      <div className='flex justify-between items-center rounded-lg border !backdrop-blur-2xl bg-white/30 border-neutral-200 max-w-[95%] mx-auto px-4 py-2'>
+      <div className='flex justify-between items-center rounded-lg  !backdrop-blur-2xl text-neutral-400   max-w-[95%] mx-auto px-4 '>
 
         <div className="flex items-center">
-          <img src={logo} width={50} height={24} alt="logo" />
-          <span className="font-extrabold ">Juma<span className="text-[#00ec76]">Code</span></span>
+          <img src={logo} width={60} height={24} alt="logo" />
+
+          <div>
+            <span className="font-extrabold ">Juma<span className="text-[#00ec76]">Code</span></span>
+            <p className="text-xs text-neutral-500">Software developer & Analista de sistemas</p>
+          </div>
+
         </div>
 
-        
+
 
         <div>
           <ul className="hidden md:flex space-x-5">
@@ -52,7 +54,7 @@ function Navbar() {
 
         <div className="md:hidden">
 
-          <button onClick={toggleMenu} className="text-black cursor-pointer ">
+          <button onClick={toggleMenu} className="text-neutral-400 cursor-pointer ">
             {mobileDrawerOpen ? <RiCloseFill /> : <RiMenu3Line />}
           </button>
 
@@ -65,7 +67,7 @@ function Navbar() {
       {
         mobileDrawerOpen && (
 
-          <div className="w-[95%] absolute md:hidden mx-auto bg-white/90   border border-neutral-200 p-4 rounded-xl mt-2">
+          <div className="w-[95%] absolute md:hidden mx-auto text-neutral-400  p-4  mt-2">
             <ul className="flex flex-col space-y-4">
               {
                 NAV_ITEMS.map((item, index) => (
@@ -94,7 +96,7 @@ function Navbar() {
       }
 
 
-    </motion.nav>
+    </nav>
   )
 }
 
