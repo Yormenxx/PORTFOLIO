@@ -1,39 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
-
-@import url('https://fonts.googleapis.com/css2?family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 
-body{
-     font-family: "Tomorrow", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-    background-color: black;
+
+html{
+  scroll-behavior: smooth;
 }
 
-.containerMain{
-    position: relative;
-    width: 100%;
-    background-color: rgba(88, 88, 88, 0.404);
-    background: url("https://www.map4.jp/wp-content/uploads/2023/05/AdobeStock_573559036-scaled.jpeg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 10px;
-    z-index: 2;
-}
-.containerMain::before{
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.815); 
-  z-index: -1;
-  pointer-events: none; 
+body {
+   font-family: "Roboto", sans-serif;
+  font-style: normal;
 }
 
 .typed{
@@ -65,18 +44,30 @@ body{
     }
   }
 
+.icons{
+  box-shadow: -2px 7px 5px -2px rgba(0,0,0,0.66);
+-webkit-box-shadow: -2px 7px 5px -2px rgba(0,0,0,0.66);
+-moz-box-shadow: -2px 7px 5px -2px rgba(0,0,0,0.66);
+}
+
 .buttonFilter{
-  padding:7px 20px;
+  margin-left: 10px;
+  padding: 2px 6px;
   text-transform: capitalize;
-  background-color: white;
-  border-radius: 10px;
-  color: black;
-  font-weight: bold;
-  transition: .2s ease-in-out;
   cursor: pointer;
+  border: 1px solid #666;
+  border-radius: 4px;
 }
 .buttonFilter:hover{
   opacity: 80%;
+
+}
+
+.contactLink{
+  display: flex;
+  gap: 2px;
+  align-items: center;
+
 
 }
 
@@ -196,3 +187,7 @@ body{
      }
 }
 
+::view-transition-old(root), ::view-transition-new(root) {
+    animation: none;
+    mix-blend-mode: normal;
+}

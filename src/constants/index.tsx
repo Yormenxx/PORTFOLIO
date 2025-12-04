@@ -1,3 +1,4 @@
+
 import { BiLogoVisualStudio } from "react-icons/bi";
 import { FaCode, FaReact, FaGithub, FaNodeJs } from "react-icons/fa";
 import { BsFiletypeJson } from "react-icons/bs";
@@ -5,6 +6,8 @@ import { RiTailwindCssFill } from "react-icons/ri";
 import { SiReactrouter, SiExpress, SiSocketdotio } from "react-icons/si";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 import { BsPcDisplay } from "react-icons/bs";
+import { FaFilePdf, FaJava, FaGitAlt, FaServer, FaDatabase, FaGraduationCap } from "react-icons/fa";
+import { FaComputer } from "react-icons/fa6";
 import { MdCastForEducation } from "react-icons/md";
 import { TbBrandFramerMotion } from "react-icons/tb";
 import architect from "../assets/mockups/architect.png"
@@ -13,6 +16,7 @@ import headphones from "../assets/mockups/headphones.png"
 import libros from "../assets/mockups/libros.png"
 import sass from "../assets/mockups/sass.png"
 import socket from "../assets/mockups/socket.png"
+
 
 
 export const NAV_ITEMS = [
@@ -42,19 +46,19 @@ export const SERVICES_ITEMS = [
         name: "Desarrollo web",
         description: "Creación de sitio web responsivos enfocados en la usabilidad del usuario.Landing page o sitios web estaticos o dinamicos",
         number: "1",
-        icon: <BiLogoVisualStudio />
+        icon: <FaComputer />
     },
     {
         name: "Desarrollo backend",
         description: "Creación y consumo de Rest Api para tus aplicaciones, normalización de bases de datos,creación e integracion de Apis.",
         number: "2",
-        icon: <FaCode />
+        icon: <FaServer />
     },
     {
         name: "Analisis de sistemas",
         description: "Proceso de diseño, creación, testing y mantenimiento de sistemas, mantenimiento preventivo, apoyo al área de sistemas.",
         number: "3",
-        icon: <BsPcDisplay />
+        icon: <FaDatabase />
     },
     {
         name: "Aprendizaje",
@@ -68,30 +72,18 @@ export const SERVICES_ITEMS = [
 
 
 
-export const PROJECTS_ITEMS = [
+export const getProjectsItems = (t) => [
     {
         img: architect,
-
-        title: "Architects fan landing",
-
+        titleKey: "featuredProjects.architects.title",
+        title: t("featuredProjects.architects.title"),
         skills: [
-            {
-                icon: <FaReact />,
-                name: "React"
-
-            },
-            {
-                icon: <RiTailwindCssFill />,
-                name: "Tailwind"
-            },
-            {
-                icon: <SiReactrouter />,
-                name: "React router"
-            }
+            { icon: <FaReact />, name: "React" },
+            { icon: <RiTailwindCssFill />, name: "Tailwind" },
+            { icon: <SiReactrouter />, name: "React router" }
         ],
-
-        description: "Mi proyecto es una página web dedicada a la banda británica Architects, donde los fans pueden explorar su historia, discografía y merch. La interfaz moderna y responsive garantiza una experiencia inmersiva en cualquier dispositivo. Ideal para conocer más sobre su música y conectarse con la comunidad de seguidores.",
-
+        descriptionKey: "featuredProjects.architects.description",
+        description: t("featuredProjects.architects.description"),
         github: {
             git: <FaGithub />,
             link: "https://github.com/Yormenxx/ARCHITECTS--FAN-PAGE"
@@ -100,32 +92,18 @@ export const PROJECTS_ITEMS = [
             prevLink: "#",
             prev: <FaArrowUpRightFromSquare />
         }
-
     },
-
     {
         img: halo,
-
-        title: "Halo web landing",
-
+        titleKey: "featuredProjects.halo.title",
+        title: t("featuredProjects.halo.title"),
         skills: [
-            {
-                icon: <FaReact />,
-                name: "React"
-
-            },
-            {
-                icon: <RiTailwindCssFill />,
-                name: "Tailwind"
-            },
-            {
-                icon: <TbBrandFramerMotion />,
-                name: "Framer motion"
-            }
+            { icon: <FaReact />, name: "React" },
+            { icon: <RiTailwindCssFill />, name: "Tailwind" },
+            { icon: <TbBrandFramerMotion />, name: "Framer motion" }
         ],
-
-        description: "Este proyecto es una página web inspirada en Halo Infinite, diseñada para ofrecer información detallada sobre el juego, noticias, guías y contenido multimedia. Con una interfaz dinámica y responsive, permite a los fans sumergirse en el universo de Halo de manera intuitiva y visualmente atractiva.",
-
+        descriptionKey: "featuredProjects.halo.description",
+        description: t("featuredProjects.halo.description"),
         github: {
             git: <FaGithub />,
             link: ""
@@ -134,32 +112,18 @@ export const PROJECTS_ITEMS = [
             prevLink: "https://github.com/Yormenxx/HALO-WEB-LANDING",
             prev: <FaArrowUpRightFromSquare />
         }
-
     },
-
     {
         img: headphones,
-
-        title: "Headphone landing",
-
+        titleKey: "featuredProjects.headphones.title",
+        title: t("featuredProjects.headphones.title"),
         skills: [
-            {
-                icon: <FaReact />,
-                name: "React"
-
-            },
-            {
-                icon: <RiTailwindCssFill />,
-                name: "Tailwind"
-            },
-            {
-                icon: <TbBrandFramerMotion />,
-                name: "Framer motion"
-            }
+            { icon: <FaReact />, name: "React" },
+            { icon: <RiTailwindCssFill />, name: "Tailwind" },
+            { icon: <TbBrandFramerMotion />, name: "Framer motion" }
         ],
-
-        description: "Este proyecto es una Landing basa en la venta de audifonos, mostrando una galería visual con diseños y características. La interfaz minimalista y responsive facilita la exploración de diferentes modelos, ofreciendo una experiencia sencilla y atractiva para los usuarios.",
-
+        descriptionKey: "featuredProjects.headphones.description",
+        description: t("featuredProjects.headphones.description"),
         github: {
             git: <FaGithub />,
             link: "https://github.com/Yormenxx/HEADPHONE-WEBSITE"
@@ -168,36 +132,19 @@ export const PROJECTS_ITEMS = [
             prevLink: "#",
             prev: <FaArrowUpRightFromSquare />
         }
-
     },
-
     {
         img: libros,
-
-        title: "Books storage web",
-
+        titleKey: "featuredProjects.books.title",
+        title: t("featuredProjects.books.title"),
         skills: [
-            {
-                icon: <FaNodeJs />,
-                name: "Nodejs"
-
-            },
-            {
-                icon: <RiTailwindCssFill />,
-                name: "Tailwind"
-            },
-            {
-                icon: <SiExpress />,
-                name: "Express"
-            },
-            {
-                icon: <BsFiletypeJson />,
-                name: "Json"
-            }
+            { icon: <FaNodeJs />, name: "Nodejs" },
+            { icon: <RiTailwindCssFill />, name: "Tailwind" },
+            { icon: <SiExpress />, name: "Express" },
+            { icon: <BsFiletypeJson />, name: "Json" }
         ],
-
-        description: "Este proyecto backend, desarrollado con Node.js y Express, permite almacenar y gestionar información de libros mediante un archivo JSON. Proporciona una API sencilla y eficiente para realizar operaciones como crear o eliminar libros ",
-
+        descriptionKey: "featuredProjects.books.description",
+        description: t("featuredProjects.books.description"),
         github: {
             git: <FaGithub />,
             link: "https://github.com/Yormenxx/ALMACEN-DE-LIBROS"
@@ -206,30 +153,17 @@ export const PROJECTS_ITEMS = [
             prevLink: "#",
             prev: <FaArrowUpRightFromSquare />
         }
-
     },
-
-
     {
         img: sass,
-
-        title: "Sass landing page",
-
+        titleKey: "featuredProjects.saas.title",
+        title: t("featuredProjects.saas.title"),
         skills: [
-            {
-                icon: <FaReact />,
-                name: "React"
-
-            },
-            {
-                icon: <RiTailwindCssFill />,
-                name: "Tailwind"
-            },
-
+            { icon: <FaReact />, name: "React" },
+            { icon: <RiTailwindCssFill />, name: "Tailwind" }
         ],
-
-        description: "Este proyecto es un landing page para un SaaS, diseñado para destacar sus funciones, beneficios y características clave. Con un diseño moderno y responsive, la página combina llamadas a la acción efectivas y una presentación clara del producto, ideal para captar nuevos usuarios y generar conversiones.",
-
+        descriptionKey: "featuredProjects.saas.description",
+        description: t("featuredProjects.saas.description"),
         github: {
             git: <FaGithub />,
             link: "https://github.com/Yormenxx/SAAS-LANDING-WEB"
@@ -238,39 +172,19 @@ export const PROJECTS_ITEMS = [
             prevLink: "#",
             prev: <FaArrowUpRightFromSquare />
         }
-
     },
-
-
-
-
     {
         img: socket,
-
-        title: "Socket chat",
-
+        titleKey: "featuredProjects.socket.title",
+        title: t("featuredProjects.socket.title"),
         skills: [
-            {
-                icon: <SiSocketdotio />,
-                name: "Socket.io"
-
-            },
-            {
-                icon: <RiTailwindCssFill />,
-                name: "Tailwind"
-            },
-            {
-                icon: <FaNodeJs />,
-                name: "Nodejs"
-            },
-            {
-                icon: <SiExpress />,
-                name: "Express"
-            }
+            { icon: <SiSocketdotio />, name: "Socket.io" },
+            { icon: <RiTailwindCssFill />, name: "Tailwind" },
+            { icon: <FaNodeJs />, name: "Nodejs" },
+            { icon: <SiExpress />, name: "Express" }
         ],
-
-        description: "Este proyecto es un chat en tiempo real desarrollado con Node.js, Express y Socket.io. Permite la comunicación instantánea entre usuarios con una interfaz simple y responsive.",
-
+        descriptionKey: "featuredProjects.socket.description",
+        description: t("featuredProjects.socket.description"),
         github: {
             git: <FaGithub />,
             link: "https://github.com/Yormenxx/SOCKET-CHAT"
@@ -279,9 +193,8 @@ export const PROJECTS_ITEMS = [
             prevLink: "#",
             prev: <FaArrowUpRightFromSquare />
         }
-
-    },
-]
+    }
+];
 
 
 
