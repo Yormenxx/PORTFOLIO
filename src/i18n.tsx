@@ -23,29 +23,71 @@ const resources = {
       },
 
       featuredProjects: {
-        architects: {
-          title: "Architects fan landing",
-          description: "Mi proyecto es una página web dedicada a la banda británica Architects, donde los fans pueden explorar su historia, discografía y merch. La interfaz moderna y responsive garantiza una experiencia inmersiva en cualquier dispositivo. Ideal para conocer más sobre su música y conectarse con la comunidad de seguidores."
-        },
+
         halo: {
           title: "Halo web landing",
-          description: "Este proyecto es una página web inspirada en Halo Infinite, diseñada para ofrecer información detallada sobre el juego, noticias, guías y contenido multimedia. Con una interfaz dinámica y responsive, permite a los fans sumergirse en el universo de Halo de manera intuitiva y visualmente atractiva."
+          description: "Este proyecto es una página web inspirada en Halo Master Chief, diseñada para ofrecer información detallada sobre el juego, noticias, guías y contenido multimedia. Con una interfaz dinámica y responsive, permite a los fans sumergirse en el universo de Halo de manera intuitiva y visualmente atractiva."
         },
         headphones: {
           title: "Headphone landing",
           description: "Este proyecto es una Landing basa en la venta de audífonos, mostrando una galería visual con diseños y características. La interfaz minimalista y responsive facilita la exploración de diferentes modelos, ofreciendo una experiencia sencilla y atractiva para los usuarios."
         },
-        books: {
-          title: "Books storage web",
-          description: "Este proyecto backend, desarrollado con Node.js y Express, permite almacenar y gestionar información de libros mediante un archivo JSON. Proporciona una API sencilla y eficiente para realizar operaciones como crear o eliminar libros."
-        },
+
         saas: {
           title: "SaaS landing page",
           description: "Este proyecto es un landing page para un SaaS, diseñado para destacar sus funciones, beneficios y características clave. Con un diseño moderno y responsive, la página combina llamadas a la acción efectivas y una presentación clara del producto, ideal para captar nuevos usuarios y generar conversiones."
         },
-        socket: {
-          title: "Socket chat",
-          description: "Este proyecto es un chat en tiempo real desarrollado con Node.js, Express y Socket.io. Permite la comunicación instantánea entre usuarios con una interfaz simple y responsive."
+        crypto: {
+          title: "Crypto landing page",
+          description: "Este proyecto es una landing page dedicada a una plataforma de criptomonedas, diseñada para proporcionar información clara sobre sus servicios, características y beneficios. Con un diseño moderno y atractivo, la página busca captar la atención de los usuarios interesados en el mundo de las criptomonedas y fomentar la interacción con la plataforma."
+        },
+        medic: {
+          title: "Medical landing page",
+          description: "Este proyecto es una landing page para un servicio médico, diseñada para ofrecer información clara sobre los servicios de salud disponibles, el equipo médico y las facilidades para los pacientes. Con un diseño limpio y profesional, la página busca generar confianza y facilitar la comunicación entre los pacientes y el centro médico.",
+        },
+        furniture: {
+          title: "Furniture landing page",
+          description: "Este proyecto es una landing page para una tienda de muebles, diseñada para mostrar una variedad de productos y estilos . Con un diseño atractivo y fácil de navegar, la página permite a los usuarios explorar diferentes opciones de mobiliario y realizar compras de manera sencilla."
+        }
+
+      },
+
+      otherProjects: {
+        modern: {
+          desc: "Landing page basado en un restaurante moderno"
+        },
+        modernui: {
+          desc: "Landing page basado en un diseño ux/ui moderno"
+        },
+        outer: {
+          desc: "Landing page basado en una web de viajes al aire libre"
+        },
+        saaslanding: {
+          desc: "Saas landing page basado en un diseño moderno"
+        },
+        trpc: {
+          desc: "crud con tecnologias trpc"
+        },
+        expenses: {
+          desc: "Desarrollo de una mini aplicacion de gastos con typescript"
+        },
+        virtual: {
+          desc: "Desarrollo de una landing page moderna"
+        },
+        blogapi: {
+          desc: "Deasrrollo basico de una rest api basada en blog"
+        },
+        rest1: {
+          desc: "Practicando el desarrollo de apis"
+        },
+        rest2: {
+          desc: "Desarrollo de una api"
+        },
+        rest3: {
+          desc: "rest api con typescript"
+        },
+        rick: {
+          desc: "Consumiento api de rick and morty"
         }
       },
 
@@ -144,21 +186,63 @@ const resources = {
           title: "Headphone Landing",
           description: "This project is a landing page based on headphone sales, showcasing a visual gallery with designs and features. The minimalist and responsive interface facilitates the exploration of different models, offering a simple and attractive experience for users."
         },
-        books: {
-          title: "Books Storage Web",
-          description: "This backend project, developed with Node.js and Express, allows storing and managing book information through a JSON file. It provides a simple and efficient API to perform operations such as creating or deleting books."
-        },
+
         saas: {
           title: "SaaS Landing Page",
           description: "This project is a landing page for a SaaS, designed to highlight its functions, benefits and key features. With a modern and responsive design, the page combines effective calls to action and a clear product presentation, ideal for attracting new users and generating conversions."
         },
-        socket: {
-          title: "Socket Chat",
-          description: "This project is a real-time chat developed with Node.js, Express and Socket.io. It allows instant communication between users with a simple and responsive interface."
+        crypto: {
+          title: "Crypto landing page",
+          description: "This project features a landing page for a cryptocurrency platform, designed to clearly showcase its services, features, and benefits. With a modern and engaging interface, the page aims to attract users interested in the crypto market and drive platform engagement."
+        },
+        medic: {
+          title: "Medical landing page",
+          description: "This project is a landing page for a medical service, designed to provide clear information about available health services, the medical team, and patient facilities. With a clean and professional design, the page aims to build trust and facilitate communication between patients and the medical center.",
+        },
+        furniture: {
+          title: "Furniture landing page",
+          description: "This project is a landing page for a furniture store, designed to showcase a variety of products and styles. With an attractive and easy-to-navigate design, the page allows users to explore different furniture options and make purchases easily."
         }
       },
 
-
+      otherProjects: {
+        modern: {
+          desc: "Modern restaurant landing page"
+        },
+        modernui: {
+          desc: "Landing page based on modern UX/UI design"
+        },
+        outer: {
+          desc: "Outdoor travel landing page"
+        },
+        saaslanding: {
+          desc: "Modern SaaS landing page"
+        },
+        trpc: {
+          desc: "CRUD application using tRPC"
+        },
+        expenses: {
+          desc: "Mini expense tracker app built with TypeScript"
+        },
+        virtual: {
+          desc: "Modern landing page development"
+        },
+        blogapi: {
+          desc: "Basic REST API for a blog"
+        },
+        rest1: {
+          desc: "API development practice"
+        },
+        rest2: {
+          desc: "API development"
+        },
+        rest3: {
+          desc: "REST API built with TypeScript"
+        },
+        rick: {
+          desc: "Consuming the Rick and Morty API"
+        }
+      },
       // Projects Section
       projects: {
         title: "Projects",

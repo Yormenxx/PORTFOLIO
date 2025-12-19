@@ -1,29 +1,12 @@
 import { useTranslation } from 'react-i18next';
-
-import { getProjectsItems, OTHER_PROJECTS } from "../constants"
-import { AnimatePresence, motion } from "framer-motion"
-import React, { useState, useRef } from "react"
-import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { MdArrowOutward } from "react-icons/md";
-import { Highlighter } from "./ui/highlighter";
-
+import { getProjectsItems } from "../constants";
+import { motion,Variants } from "framer-motion";
+import { useState, useRef, useEffect } from "react";
+import { ChevronLeft, ChevronRight, Github, ExternalLink } from 'lucide-react';
 
 function Projects() {
     const { t } = useTranslation();
     const PROJECT_ITEMS = getProjectsItems(t);
-
-    const [filter, setFilter] = useState('TODOS');
-
-    const handleFilterChange = (newFilter: any) => {
-        setFilter(newFilter);
-    };
-
-    const filteredProjects = OTHER_PROJECTS.filter((project) => {
-        if (filter === 'TODOS') {
-            return true;
-        }
-        return project.type === filter;
-    });
 
     const [currentIndex, setCurrentIndex] = useState(0);
     const carouselRef = useRef(null);
@@ -44,7 +27,7 @@ function Projects() {
 
     const [itemsShown, setItemsShown] = useState(getItemsPerView());
 
-    React.useEffect(() => {
+    useEffect(() => {
         const handleResize = () => {
             setItemsShown(getItemsPerView());
         };
@@ -62,239 +45,184 @@ function Projects() {
         setCurrentIndex((prev) => Math.max(prev - 1, 0));
     };
 
+   
+    const containerVariants:Variants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.2,
+                delayChildren: 0.1
+            }
+        }
+    };
 
+    const itemFadeUp:Variants = {
+        hidden: { y: 30, opacity: 0 },
+        visible: {
+            y: 0,
+            opacity: 1,
+            transition: { type: "spring", stiffness: 60, damping: 20 }
+        }
+    };
 
     return (
-        <section className="mx-2 md:px-20 rounded-2xl  transition-colors duration-500  " >
+        <section className="md:mx-2 md:px-20 rounded-2xl transition-colors duration-500 overflow-hidden">
             <span id="proyectos"></span>
 
-            <div className="w-full m-auto px-4  ">
+            <motion.div 
+                className="w-full m-auto px-2"
+                variants={containerVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: false, amount: 0.2 }}
+            >
 
                 <div className="py-6">
-                    <h2 className="text-4xl text-neutral-500 dark:text-neutral-100 md:text-7xl font-bold text-center">{t("projects.title")}</h2>
+                    <motion.h2 
+                        variants={itemFadeUp}
+                        className="text-4xl text-neutral-500 dark:text-neutral-100 md:text-7xl font-bold text-center"
+                    >
+                        {t("projects.title")}
+                    </motion.h2>
                 </div>
 
 
-                <div className="relative w-full px-4 md:px-8 ">
+                <motion.div 
+                    variants={itemFadeUp}
+                    className="relative w-full px-4 md:px-8"
+                >
 
-                    {/* Botón Anterior */}
-                    <button
+                
+                    <motion.button
                         onClick={goToPrev}
                         disabled={currentIndex === 0}
-                        className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white shadow-lg rounded-full p-2 disabled:opacity-30 disabled:cursor-not-allowed hover:bg-neutral-100 transition-all"
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                        className="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-white dark:bg-neutral-800 shadow-lg rounded-full p-2 disabled:opacity-30 disabled:cursor-not-allowed hover:bg-neutral-100 dark:hover:bg-neutral-700 transition-colors"
                         aria-label="Proyecto anterior"
                     >
-                        <ChevronLeft className="w-6 h-6 text-neutral-700 cursor-pointer" />
-                    </button>
+                        <ChevronLeft className="w-6 h-6 text-neutral-700 dark:text-neutral-200" />
+                    </motion.button>
 
-                    {/* Carousel Container */}
-                    <div className="overflow-hidden" ref={carouselRef}>
+                    
+                    <div className="overflow-hidden py-4" ref={carouselRef}>
                         <div
-                            className="flex transition-transform duration-500 ease-in-out gap-4"
+                            className="flex transition-transform duration-500 ease-in-out gap-2"
                             style={{
                                 transform: `translateX(-${currentIndex * (100 / itemsShown)}%)`
                             }}
                         >
                             {PROJECT_ITEMS.map((item, index) => (
-                                <div
+                                <motion.div
                                     key={index}
                                     className="flex-shrink-0"
                                     style={{
                                         width: `calc(${100 / itemsShown}% - ${(itemsShown - 1) * 16 / itemsShown}px)`
                                     }}
+                                    
+                                    whileHover={{ y: -5 }}
+                                    transition={{ type: "spring", stiffness: 300 }}
                                 >
-                                    <a
-                                        href={item.github.link}
-                                        className="relative flex flex-col h-full justify-center w-full p-3 transition-all hover:scale-95 rounded-xl bg-neutral-100 dark:bg-neutral-900 "
-                                    >
-                                        <figure className="overflow-hidden rounded-xl h-[200px]">
-                                            <img
-                                                src={item.img}
-                                                alt={item.title}
-                                                className="w-full h-full object-cover"
-                                            />
-                                        </figure>
+                                    <div className="relative flex flex-col h-full justify-between w-full p-3 rounded-xl bg-neutral-100 dark:bg-neutral-900 border border-transparent dark:border-neutral-800 hover:border-neutral-200 dark:hover:border-neutral-700 transition-all shadow-sm">
+                                        
+                                   
+                                        <div>
+                                            <figure className="overflow-hidden rounded-xl h-[200px] w-full">
+                                                <img
+                                                    src={item?.img}
+                                                    alt={item?.title}
+                                                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                                                />
+                                            </figure>
 
-                                        <div className="flex flex-col items-center sm:items-start px-3 pt-3">
-                                            <div className="w-full flex items-center justify-between mb-2">
-                                                <h2 className="font-bold  text-lg text-neutral-700 dark:text-neutral-200">
-                                                    {item.title}
-                                                </h2>
-                                                <div className="flex flex-wrap items-center gap-1">
-                                                    {item.skills.map((icon, idx) => (
-                                                        <div
-                                                            key={idx}
-                                                            className="flex font-mono items-center text-xl text-neutral-500 dark:text-neutral-400"
-                                                        >
-                                                            <span>{icon.icon}</span>
-                                                        </div>
-                                                    ))}
+                                            <div className="flex flex-col items-center sm:items-start px-3 pt-4">
+                                                <div className="w-full flex items-center justify-between mb-3">
+                                                    <h2 className="font-bold text-lg text-neutral-800 dark:text-neutral-100 truncate pr-2">
+                                                        {item?.title}
+                                                    </h2>
+                                                    <div className="flex flex-wrap items-center gap-2">
+                                                        {item?.skills.map((icon, idx) => (
+                                                            <div
+                                                                key={idx}
+                                                                className="flex items-center text-lg text-neutral-600 dark:text-neutral-400"
+                                                                title="Tech Stack"
+                                                            >
+                                                                <span>{icon.icon}</span>
+                                                            </div>
+                                                        ))}
+                                                    </div>
                                                 </div>
-                                            </div>
 
-                                            <p className="text-[13px] text-neutral-800 dark:text-neutral-400 w-full text-center sm:text-left line-clamp-3 ">
-                                                {item.description}
-                                            </p>
+                                                <p className="text-[13px] text-neutral-600 dark:text-neutral-400 w-full text-center sm:text-left line-clamp-3 leading-relaxed mb-4">
+                                                    {item?.description}
+                                                </p>
+                                            </div>
                                         </div>
-                                    </a>
-                                </div>
+
+                                
+                                        <div className="px-3 pb-2 flex gap-3 mt-auto">
+                                            {item?.github?.link && (
+                                                <motion.a 
+                                                    href={item?.github.link} 
+                                                    target='_blank'
+                                                    whileHover={{ scale: 1.05 }}
+                                                    whileTap={{ scale: 0.95 }}
+                                                    className="flex-1 flex items-center justify-center gap-2 py-2 px-4 rounded-lg bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 text-sm font-medium text-neutral-700 dark:text-neutral-200 hover:bg-neutral-50 dark:hover:bg-neutral-700 transition-colors"
+                                                >
+                                                    <Github className="w-4 h-4" />
+                                                    GitHub
+                                                </motion.a>
+                                            )}
+                                            {item?.preview?.prevLink && (
+                                                <motion.a 
+                                                    href={item?.preview.prevLink} 
+                                                    target="_blank"
+                                                    whileHover={{ scale: 1.05 }}
+                                                    whileTap={{ scale: 0.95 }}
+                                                    className="flex-1 flex items-center justify-center gap-2 py-2 px-4 rounded-lg bg-neutral-900 dark:bg-neutral-100 text-white dark:text-neutral-900 text-sm font-medium hover:bg-neutral-800 dark:hover:bg-neutral-200 transition-colors shadow-md"
+                                                >
+                                                    <ExternalLink className="w-4 h-4" />
+                                                    Preview
+                                                </motion.a>
+                                            )}
+                                        </div>
+                                    </div>
+                                </motion.div>
                             ))}
                         </div>
                     </div>
 
-                    {/* Botón Siguiente */}
-                    <button
+             
+                    <motion.button
                         onClick={goToNext}
                         disabled={currentIndex === maxIndex}
-                        className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white shadow-lg rounded-full p-2 disabled:opacity-30 disabled:cursor-not-allowed hover:bg-neutral-100 transition-all"
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                        className="absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-white dark:bg-neutral-800 shadow-lg rounded-full p-2 disabled:opacity-30 disabled:cursor-not-allowed hover:bg-neutral-100 dark:hover:bg-neutral-700 transition-colors"
                         aria-label="Proyecto siguiente"
                     >
-                        <ChevronRight className="w-6 h-6 text-neutral-700 cursor-pointer" />
-                    </button>
+                        <ChevronRight className="w-6 h-6 text-neutral-700 dark:text-neutral-200" />
+                    </motion.button>
 
-                    {/* Indicadores de posición */}
                     <div className="flex justify-center gap-2 mt-6">
                         {Array.from({ length: maxIndex + 1 }).map((_, idx) => (
                             <button
                                 key={idx}
                                 onClick={() => setCurrentIndex(idx)}
-                                className={`h-2 rounded-full transition-all ${idx === currentIndex
-                                    ? 'w-8 bg-neutral-700'
-                                    : 'w-2 bg-neutral-300 hover:bg-neutral-400'
+                                className={`h-2 rounded-full transition-all duration-300 ${idx === currentIndex
+                                    ? 'w-8 bg-neutral-700 dark:bg-neutral-200'
+                                    : 'w-2 bg-neutral-300 dark:bg-neutral-700 hover:bg-neutral-400 dark:hover:bg-neutral-600'
                                     }`}
                                 aria-label={`Ir a página ${idx + 1}`}
                             />
                         ))}
                     </div>
-                </div>
+                </motion.div>
 
-                <div className="md:px-5 py-4">
-
-                    <p className="pl-4 ml-3 mb-2 text-xl  text-neutral-600 dark:text-white">
-                        <Highlighter action="underline" color="#00ec76">
-                            Otros proyectos
-                        </Highlighter>
-                    </p>
-
-
-
-
-
-                    <div className="flex items-center justify-start gap-3 ml-4 py-4">
-                        <button
-                            className={`px-6 py-2.5 rounded-full border-2 font-medium transition-all duration-300 ${filter === 'TODOS'
-                                ? 'border-[#00ec76] bg-[#00ec76] text-black'
-                                : 'border-neutral-300 dark:border-neutral-700 hover:border-[#00ec76] hover:text-[#00ec76]'
-                                }`}
-                            onClick={() => handleFilterChange('TODOS')}
-                        >
-                            Todos
-                        </button>
-                        <button
-                            className={`px-6 py-2.5 rounded-full border-2 font-medium transition-all duration-300 ${filter === 'front'
-                                ? 'border-[#00ec76] bg-[#00ec76] text-black'
-                                : 'border-neutral-300 dark:border-neutral-700 hover:border-[#00ec76] hover:text-[#00ec76]'
-                                }`}
-                            onClick={() => handleFilterChange('front')}
-                        >
-                            Front
-                        </button>
-                        <button
-                            className={`px-6 py-2.5 rounded-full border-2 font-medium transition-all duration-300 ${filter === 'back'
-                                ? 'border-[#00ec76] bg-[#00ec76] text-black'
-                                : 'border-neutral-300 dark:border-neutral-700 hover:border-[#00ec76] hover:text-[#00ec76]'
-                                }`}
-                            onClick={() => handleFilterChange('back')}
-                        >
-                            Backend
-                        </button>
-                        <button
-                            className={`px-6 py-2.5 rounded-full border-2 font-medium transition-all duration-300 ${filter === 'otro'
-                                ? 'border-[#00ec76] bg-[#00ec76] text-black'
-                                : 'border-neutral-300 dark:border-neutral-700 hover:border-[#00ec76] hover:text-[#00ec76]'
-                                }`}
-                            onClick={() => handleFilterChange('otro')}
-                        >
-                            Otro
-                        </button>
-                    </div>
-
-
-
-                    <div className="mt-6 md:px-5">
-                        <motion.div
-                            initial={{ opacity: 0, y: 50 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6, ease: "easeInOut" }}
-                            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
-                        >
-                            <AnimatePresence mode="popLayout">
-                                {filteredProjects.map((item, index) => (
-                                    <motion.a
-                                        href={item.link}
-                                        target="_blank"
-                                        layout
-                                        key={item.id}
-                                        initial={{ opacity: 0, scale: 0.9 }}
-                                        animate={{ opacity: 1, scale: 1 }}
-                                        exit={{ opacity: 0, scale: 0.9 }}
-                                        transition={{
-                                            duration: 0.3,
-                                            ease: "easeInOut",
-                                            delay: index * 0.05,
-                                        }}
-                                        className="group relative overflow-hidden rounded-xl border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 p-6 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 hover:border-[#00ec76]"
-                                    >
-                                        {/* Efecto de gradiente en hover */}
-                                        <div className="absolute inset-0 bg-gradient-to-br from-[#00ec76]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-
-                                        <div className="relative space-y-3">
-                                            {/* Header con título e icono */}
-                                            <div className="flex items-start justify-between gap-2">
-                                                <h3 className="text-lg font-semibold capitalize dark:text-neutral-50 line-clamp-2 group-hover:text-[#00ec76] transition-colors">
-                                                    {item.name}
-                                                </h3>
-                                                <MdArrowOutward className="text-xl flex-shrink-0 dark:text-white transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-                                            </div>
-
-                                            {/* Descripción */}
-                                            <p className="text-sm text-neutral-600 dark:text-neutral-400 line-clamp-2">
-                                                {item.description}
-                                            </p>
-
-                                            {/* Tags de tecnologías (opcional) */}
-                                            {item.skill && item.skill.length > 0 && (
-                                                <div className="flex flex-wrap gap-2 pt-2">
-                                                    {item.skill.slice(0, 3).map((skill, idx) => (
-                                                        <span
-                                                            key={idx}
-                                                            className="px-2 py-1 text-xs rounded-full bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300"
-                                                        >
-                                                            {skill.name}
-                                                        </span>
-                                                    ))}
-                                                </div>
-                                            )}
-                                        </div>
-                                    </motion.a>
-                                ))}
-                            </AnimatePresence>
-                        </motion.div>
-                    </div>
-
-
-
-                    {/* <div className="w-full flex justify-center my-4">
-
-                    <Link to="projects" className=" px-4 py-2 bg-[#00ec76] rounded-xl capitalize text-white hover:opacity-60 ease-in-out duration-200  ">Ver más proyectos</Link>
-                </div> */}
-
-                </div>
-
-
-            </div>
+            </motion.div>
         </section>
     )
 }
 
-export default Projects
+export default Projects;

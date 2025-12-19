@@ -15,6 +15,7 @@ import {
   ScrollVelocityRow,
 } from "./components/ui/scroll-based-velocity.tsx"
 import Transition from './components/Transition.tsx'
+import SecondaryProjects from './components/SecondaryProjects.tsx'
 
 function App() {
 
@@ -33,17 +34,9 @@ function App() {
 
 
           <Projects />
+          <SecondaryProjects/>
 
-          {/* <ScrollVelocityContainer className="text-4xl font-bold md:text-7xl py-10 text-neutral-300">
-            <ScrollVelocityRow baseVelocity={10} direction={1}>
-              Analisis de Sistemas
-            </ScrollVelocityRow>
-            <ScrollVelocityRow baseVelocity={10} direction={-1}>
-              Desarrollo web
-            </ScrollVelocityRow>
-          </ScrollVelocityContainer> */}
-          {/* <Slider /> */}
-
+         
 
           <Contact />
           <Footer />

@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { IoLanguage } from 'react-icons/io5';
+
 
 function LanguageSwitcher() {
   const { i18n } = useTranslation();
@@ -19,7 +19,7 @@ function LanguageSwitcher() {
     >
       {/* <IoLanguage className="text-lg" /> */}
       <span className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
-        {i18n.language === 'es' ? '🇺🇸 EN' : '🇪🇸 ES'}
+        {i18n.language === 'es' ? 'EN' : 'ES'}
       </span>
     </motion.button>
   );

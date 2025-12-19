@@ -1,23 +1,16 @@
-
-import { BiLogoVisualStudio } from "react-icons/bi";
-import { FaCode, FaReact, FaGithub, FaNodeJs } from "react-icons/fa";
-import { BsFiletypeJson } from "react-icons/bs";
+import { FaReact, FaGithub } from "react-icons/fa";
 import { RiTailwindCssFill } from "react-icons/ri";
-import { SiReactrouter, SiExpress, SiSocketdotio } from "react-icons/si";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
-import { BsPcDisplay } from "react-icons/bs";
-import { FaFilePdf, FaJava, FaGitAlt, FaServer, FaDatabase, FaGraduationCap } from "react-icons/fa";
+import { FaServer, FaDatabase } from "react-icons/fa";
 import { FaComputer } from "react-icons/fa6";
 import { MdCastForEducation } from "react-icons/md";
 import { TbBrandFramerMotion } from "react-icons/tb";
-import architect from "../assets/mockups/architect.png"
 import halo from "../assets/mockups/halo.png"
 import headphones from "../assets/mockups/headphones.png"
-import libros from "../assets/mockups/libros.png"
 import sass from "../assets/mockups/sass.png"
-import socket from "../assets/mockups/socket.png"
-
-
+import crypto from "../assets/mockups/crypto.png"
+import medic from "../assets/mockups/medic.png"
+import furniture from "../assets/mockups/furniture.png"
 
 export const NAV_ITEMS = [
     {
@@ -72,27 +65,8 @@ export const SERVICES_ITEMS = [
 
 
 
-export const getProjectsItems = (t) => [
-    {
-        img: architect,
-        titleKey: "featuredProjects.architects.title",
-        title: t("featuredProjects.architects.title"),
-        skills: [
-            { icon: <FaReact />, name: "React" },
-            { icon: <RiTailwindCssFill />, name: "Tailwind" },
-            { icon: <SiReactrouter />, name: "React router" }
-        ],
-        descriptionKey: "featuredProjects.architects.description",
-        description: t("featuredProjects.architects.description"),
-        github: {
-            git: <FaGithub />,
-            link: "https://github.com/Yormenxx/ARCHITECTS--FAN-PAGE"
-        },
-        preview: {
-            prevLink: "#",
-            prev: <FaArrowUpRightFromSquare />
-        }
-    },
+export const getProjectsItems = (t: any) => [
+
     {
         img: halo,
         titleKey: "featuredProjects.halo.title",
@@ -106,10 +80,10 @@ export const getProjectsItems = (t) => [
         description: t("featuredProjects.halo.description"),
         github: {
             git: <FaGithub />,
-            link: ""
+            link: "https://github.com/Yormenxx/projects-js-node-others/tree/main/HALO-WEB-LANDING"
         },
         preview: {
-            prevLink: "https://github.com/Yormenxx/HALO-WEB-LANDING",
+            prevLink: "https://mojodeco-halolanding.vercel.app/",
             prev: <FaArrowUpRightFromSquare />
         }
     },
@@ -126,279 +100,209 @@ export const getProjectsItems = (t) => [
         description: t("featuredProjects.headphones.description"),
         github: {
             git: <FaGithub />,
-            link: "https://github.com/Yormenxx/HEADPHONE-WEBSITE"
+            link: "https://github.com/Yormenxx/projects-js-node-others/tree/main/HEADPHONE-WEBSITE"
         },
         preview: {
-            prevLink: "#",
+            prevLink: "https://mojodeco-headphoneslanding.vercel.app/",
             prev: <FaArrowUpRightFromSquare />
         }
     },
-    {
-        img: libros,
-        titleKey: "featuredProjects.books.title",
-        title: t("featuredProjects.books.title"),
-        skills: [
-            { icon: <FaNodeJs />, name: "Nodejs" },
-            { icon: <RiTailwindCssFill />, name: "Tailwind" },
-            { icon: <SiExpress />, name: "Express" },
-            { icon: <BsFiletypeJson />, name: "Json" }
-        ],
-        descriptionKey: "featuredProjects.books.description",
-        description: t("featuredProjects.books.description"),
-        github: {
-            git: <FaGithub />,
-            link: "https://github.com/Yormenxx/ALMACEN-DE-LIBROS"
-        },
-        preview: {
-            prevLink: "#",
-            prev: <FaArrowUpRightFromSquare />
-        }
-    },
+
     {
         img: sass,
         titleKey: "featuredProjects.saas.title",
         title: t("featuredProjects.saas.title"),
         skills: [
             { icon: <FaReact />, name: "React" },
-            { icon: <RiTailwindCssFill />, name: "Tailwind" }
+            { icon: <RiTailwindCssFill />, name: "Tailwind" },
+            { icon: <TbBrandFramerMotion />, name: "Framer motion" }
         ],
         descriptionKey: "featuredProjects.saas.description",
         description: t("featuredProjects.saas.description"),
         github: {
             git: <FaGithub />,
-            link: "https://github.com/Yormenxx/SAAS-LANDING-WEB"
+            link: "https://github.com/Yormenxx/projects-js-node-others/tree/main/SAAS-LANDING-WEB"
         },
         preview: {
-            prevLink: "#",
+            prevLink: "https://mojodeco-saaslanding.vercel.app/",
+            prev: <FaArrowUpRightFromSquare />
+        }
+    },
+
+    {
+        img: crypto,
+        titleKey: "featuredProjects.crypto.title",
+        title: t("featuredProjects.crypto.title"),
+        skills: [
+            { icon: <FaReact />, name: "React" },
+            { icon: <RiTailwindCssFill />, name: "Tailwind" },
+            { icon: <TbBrandFramerMotion />, name: "Framer motion" }
+        ],
+        descriptionKey: "featuredProjects.crypto.description",
+        description: t("featuredProjects.crypto.description"),
+        github: {
+            git: <FaGithub />,
+            link: "https://github.com/Yormenxx/projects-js-node-others/tree/main/CRYPTO-LANDING"
+        },
+        preview: {
+            prevLink: "https://mojodeco-cryptolanding.vercel.app/",
             prev: <FaArrowUpRightFromSquare />
         }
     },
     {
-        img: socket,
-        titleKey: "featuredProjects.socket.title",
-        title: t("featuredProjects.socket.title"),
+        img: medic,
+        titleKey: "featuredProjects.medic.title",
+        title: t("featuredProjects.medic.title"),
         skills: [
-            { icon: <SiSocketdotio />, name: "Socket.io" },
             { icon: <RiTailwindCssFill />, name: "Tailwind" },
-            { icon: <FaNodeJs />, name: "Nodejs" },
-            { icon: <SiExpress />, name: "Express" }
         ],
-        descriptionKey: "featuredProjects.socket.description",
-        description: t("featuredProjects.socket.description"),
+        descriptionKey: "featuredProjects.medic.description",
+        description: t("featuredProjects.medic.description"),
         github: {
             git: <FaGithub />,
-            link: "https://github.com/Yormenxx/SOCKET-CHAT"
+            link: "https://github.com/Yormenxx/projects-js-node-others/tree/main/MEDIC-WEB"
         },
         preview: {
-            prevLink: "#",
+            prevLink: "https://mojodeco-mediclanding.vercel.app/",
+            prev: <FaArrowUpRightFromSquare />
+        }
+    },
+    {
+        img: furniture,
+        titleKey: "featuredProjects.furniture.title",
+        title: t("featuredProjects.furniture.title"),
+        skills: [
+            { icon: <FaReact />, name: "React" },
+            { icon: <RiTailwindCssFill />, name: "Tailwind" },
+            { icon: <TbBrandFramerMotion />, name: "Framer motion" }
+        ],
+        descriptionKey: "featuredProjects.furniture.description",
+        description: t("featuredProjects.furniture.description"),
+        github: {
+            git: <FaGithub />,
+            link: "https://github.com/Yormenxx/projects-js-node-others/tree/main/LANDING-WEB-F"
+        },
+        preview: {
+            prevLink: "https://mojodeco-furniturelanding.vercel.app/",
             prev: <FaArrowUpRightFromSquare />
         }
     }
+
 ];
 
 
 
-export const OTHER_PROJECTS = [
-
+export const otherProjects = (t: any) => [
     {
         id: 1,
-        name: "E learning web",
-        description: "Landing page basada en una empresa que ofrece educacion virtual",
-        skill: [
-            {
-                name: "react"
-            },
-            {
-                name: "tailwind"
-            }
-        ],
-        link: "https://github.com/Yormenxx/LEARNING-WEB",
+        name: "Modern restaurant",
+        // CORRECCIÓN: Usar t() aquí
+        description: t("otherProjects.modern.desc"), 
+        skill: [{ name: "react" }, { name: "tailwind" }, { name: "framer motion" }],
+        link: "https://github.com/Yormenxx/projects-js-node-others/tree/main/MODERN-RESTAURANT",
         src: "source code",
         type: "front"
     },
-
-
     {
         id: 2,
-        name: "php crud",
-        description: "Creación de un crud básico en php con la ayuda de xampp y bootstrap",
-        skill: [
-            {
-                name: "xampp"
-            },
-            {
-                name: "bootstrap"
-            }
-        ],
-        link: "https://github.com/Yormenxx/PHP-CRUD-ONE",
+        name: "Modern website ux/ui",
+        description: t("otherProjects.modernui.desc"),
+        skill: [{ name: "react" }, { name: "tailwind" }],
+        link: "https://github.com/Yormenxx/projects-js-node-others/tree/main/MODERN-WEBSITE-UX-UI",
         src: "source code",
-        type: "back"
+        type: "front"
     },
-
-
     {
         id: 3,
-        name: "Typescript expenses app",
-        description: "Aplicación de gastos creada en typesript",
-        skill: [
-            {
-                name: "typescript"
-            }
-        ],
-        link: "https://github.com/Yormenxx/TS-APP-EXPENSES",
+        name: "Outdoor travel",
+        description: t("otherProjects.outer.desc"),
+        skill: [{ name: "react" }, { name: "tailwind" }],
+        link: "https://github.com/Yormenxx/projects-js-node-others/tree/main/OUTDOOR-TRAVEL",
         src: "source code",
-        type: "back"
+        type: "front"
     },
-
-
     {
         id: 4,
-        name: "Mcu getting api",
-        description: "Consumiendo el api de marvel para posteriormente generar una interfaz",
-        skill: [
-            {
-                name: "xampp"
-            }
-        ],
-        link: "https://github.com/Yormenxx/MCU-GETTING-API",
+        name: "Saas landing page",
+        description: t("otherProjects.saaslanding.desc"),
+        skill: [{ name: "react" }, { name: "tailwind" }, { name: "framer motion" }],
+        link: "https://github.com/Yormenxx/projects-js-node-others/tree/main/SAAS-LANDING-PAGE",
         src: "source code",
-        type: "back"
+        type: "front"
     },
-
-
-
     {
         id: 5,
-        name: "Outdoor travel",
-        description: "pagina web inspirada en viajes",
-        skill: [
-            {
-                name: "react"
-            },
-            {
-                name: "tailwind"
-            }
-        ],
-        link: "https://github.com/Yormenxx/OUTDOOR-TRAVEL",
-        src: "source code",
-        type: "front"
-    },
-
-
-    {
-        id: 6,
-        name: "TRPC crud",
-        description: "Crud realizado mediante trpc",
-        skill: [
-            {
-                name: "typescript"
-            },
-            {
-                name: "nodejs"
-            },
-            {
-                name: "trpc"
-            }
-        ],
-        link: "https://github.com/Yormenxx/TRPC-CRUD",
+        name: "Trpc crud",
+        description: t("otherProjects.trpc.desc"),
+        skill: [{ name: "react" }, { name: "tailwind" }, { name: "typescript" }, { name: "trpc" }],
+        link: "https://github.com/Yormenxx/projects-js-node-others/tree/main/TRPC-CRUD",
         src: "source code",
         type: "back"
     },
-
-
+    {
+        id: 6,
+        name: "ts-app-expenses",
+        description: t("otherProjects.expenses.desc"),
+        skill: [{ name: "react" }, { name: "typescript" }, { name: "tailwind" }],
+        link: "https://github.com/Yormenxx/projects-js-node-others/tree/main/TS-APP-EXPENSES",
+        src: "source code",
+        type: "back"
+    },
     {
         id: 7,
-        name: "Password generator",
-        description: "Proyecto que permite la generación de contraseñas mediante la linea de comandos",
-        skill: [
-            {
-                name: "javascript"
-            },
-            {
-                name: "inquirer"
-            },
-            {
-                name: "chalk"
-            }
-        ],
-        link: "https://github.com/Yormenxx/COMMAND-PASSWORD-GENERATOR",
+        name: "Virtual landing",
+        description: t("otherProjects.virtual.desc"), 
+        skill: [{ name: "react" }, { name: "tailwind" }],
+        link: "https://github.com/Yormenxx/projects-js-node-others/tree/main/VIRTUAL-LANDING",
         src: "source code",
         type: "front"
     },
-
-
-
-
     {
         id: 8,
-        name: "Modern restaurant",
-        description: "Landing page  basado en un restaurante",
-        skill: [
-            {
-                name: "react"
-            },
-            {
-                name: "tailwind"
-            }
-        ],
-        link: "https://github.com/Yormenxx/MODERN-RESTAURANT",
+        name: "blog api",
+        description: t("otherProjects.blogapi.desc"),
+        skill: [{ name: "nodejs" }, { name: "express" }, { name: "mongo" }],
+        link: "https://github.com/Yormenxx/javascript-elements/tree/main/api_construction_projects/restapi_blog_users/backend",
         src: "source code",
-        type: "front"
+        type: "back"
     },
-
     {
         id: 9,
-        name: "Crypto landing",
-        description: "Landing page basada en un web de cryptos",
-        skill: [
-            {
-                name: "react"
-            },
-            {
-                name: "tailwind"
-            }
-        ],
-        link: "https://github.com/Yormenxx/CRYPTO-LANDING",
+        name: "Rest api 1",
+        description: t("otherProjects.rest1.desc"), 
+        skill: [{ name: "nodejs" }, { name: "express" }, { name: "mongo" }],
+        link: "https://github.com/Yormenxx/javascript-elements/tree/main/api_construction_projects/restapibasic",
         src: "source code",
-        type: "front"
+        type: "back"
     },
-
     {
         id: 10,
-        name: "Landing furniture ",
-        description: "Landing web basada en la venta de muebles",
-        skill: [
-            {
-                name: "react"
-            },
-            {
-                name: "tailwind"
-            }
-        ],
-        link: "https://github.com/Yormenxx/LANDING-WEB-F",
+        name: "Rest api 2",
+        description: t("otherProjects.rest2.desc"),
+        skill: [{ name: "nodejs" }, { name: "express" }, { name: "mongo" }],
+        link: "https://github.com/Yormenxx/javascript-elements/tree/main/api_construction_projects/restapibasic1/backend",
         src: "source code",
-        type: "front"
+        type: "back"
     },
-
     {
         id: 11,
-        name: "virtual landing",
-        description: "Landing page basado una web de realizad aumentada ",
-        skill: [
-            {
-                name: "react"
-            },
-            {
-                name: "tailwind"
-            }
-        ],
-
-        link: "https://github.com/Yormenxx/VIRTUAL-LANDING",
+        name: "Rest api 3",
+        description: t("otherProjects.rest3.desc"),
+        skill: [{ name: "nodejs" }, { name: "express" }, { name: "mongo" }],
+        link: "https://github.com/Yormenxx/javascript-elements/tree/main/api_construction_projects/restapiwithts",
+        src: "source code",
+        type: "back"
+    },
+    {
+        id: 12,
+        name: "Rick and Morty",
+        description: t("otherProjects.rick.desc"),
+        skill: [{ name: "nodejs" }, { name: "express" }, { name: "mongo" }],
+        link: "https://github.com/Yormenxx/javascript-elements/tree/main/api_construction_projects/rickandmorty",
         src: "source code",
         type: "front"
     }
-
-]
+];
 
 
 
