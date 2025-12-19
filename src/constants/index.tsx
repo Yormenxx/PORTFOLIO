@@ -5,12 +5,12 @@ import { FaServer, FaDatabase } from "react-icons/fa";
 import { FaComputer } from "react-icons/fa6";
 import { MdCastForEducation } from "react-icons/md";
 import { TbBrandFramerMotion } from "react-icons/tb";
-import halo from "../assets/mockups/halo.png"
-import headphones from "../assets/mockups/headphones.png"
-import sass from "../assets/mockups/sass.png"
-import crypto from "../assets/mockups/crypto.png"
-import medic from "../assets/mockups/medic.png"
-import furniture from "../assets/mockups/furniture.png"
+import halo from "../assets/mockups/halo.webp"
+import headphones from "../assets/mockups/headphones.webp"
+import sass from "../assets/mockups/sass.webp"
+import crypto from "../assets/mockups/crypto.webp"
+import medic from "../assets/mockups/medic.webp"
+import furniture from "../assets/mockups/furniture.webp"
 
 export const NAV_ITEMS = [
     {

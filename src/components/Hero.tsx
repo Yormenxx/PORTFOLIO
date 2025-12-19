@@ -11,10 +11,15 @@ import { GridPattern } from './ui/grid-pattern';
 import Type from './Type';
 import { cn } from '@/lib/utils';
 
+type techItem ={
+  icon: React.ReactNode;
+  name:string
+}
+
 function Hero() {
   const { t } = useTranslation();
 
-  const techStack = [
+  const techStack:techItem[] = [
     { icon: <FaGitAlt className="text-4xl text-black dark:text-white" />, name: "Git" },
     { icon: <SiNextdotjs className="text-4xl text-black dark:text-white" />, name: "Next" },
     { icon: <SiNestjs className="text-4xl text-black dark:text-white" />, name: "Nestjs" },
@@ -127,9 +132,9 @@ function Hero() {
                 variants={iconContainerVariants}
               >
                 {techStack.map((tech, index) => (
-                  <motion.div key={index} variants={iconVariants}>
+                  <motion.div key={index} variants={iconVariants} >
                     <Tooltip>
-                      <TooltipTrigger className="icons button-shadow flex h-13 w-13 items-center justify-center rounded-xl border border-gray-200 bg-white dark:bg-neutral-800 dark:border-neutral-700 peer-checked:translate-y-0.5 peer-checked:shadow-none hover:translate-y-0.5 hover:text-[#00ec76] duration-200 ease-in-out">
+                      <TooltipTrigger aria-label={`Tecnología: ${tech.name}`} className="icons button-shadow flex h-13 w-13 items-center justify-center rounded-xl border border-gray-200 bg-white dark:bg-neutral-800 dark:border-neutral-700 peer-checked:translate-y-0.5 peer-checked:shadow-none hover:translate-y-0.5 hover:text-[#00ec76] duration-200 ease-in-out">
                         {tech.icon}
                       </TooltipTrigger>
                       <TooltipContent>
