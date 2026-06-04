@@ -62,7 +62,7 @@ function Services() {
     <>
       <span id="services"></span>
       <section className="relative px-4 md:px-20">
-        <div className="py-6">
+        {/* <div className="py-6">
           <motion.h2 
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -72,7 +72,7 @@ function Services() {
           >
             {t('services.title')}
           </motion.h2>
-        </div>
+        </div> */}
 
         <div className="grid grid-cols-1 place-items-center">
           <div className="w-full flex justify-center">
@@ -99,7 +99,7 @@ function Services() {
                         </span>
                       </div>
 
-                      <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed line-clamp-2 mt-4">
+                      <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed  mt-4">
                         {service.description}
                       </p>
                     </div>

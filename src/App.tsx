@@ -24,7 +24,7 @@ function App() {
             <Hero />
             <Services />
             <Projects />
-            <SecondaryProjects />
+            {/* <SecondaryProjects /> */}
             <Contact />
           </main>
 

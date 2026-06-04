@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { getProjectsItems } from "../constants";
-import { motion,Variants } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { useState, useRef, useEffect } from "react";
 import { ChevronLeft, ChevronRight, Github, ExternalLink } from 'lucide-react';
 
@@ -45,8 +45,8 @@ function Projects() {
         setCurrentIndex((prev) => Math.max(prev - 1, 0));
     };
 
-   
-    const containerVariants:Variants = {
+
+    const containerVariants: Variants = {
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,
@@ -57,7 +57,7 @@ function Projects() {
         }
     };
 
-    const itemFadeUp:Variants = {
+    const itemFadeUp: Variants = {
         hidden: { y: 30, opacity: 0 },
         visible: {
             y: 0,
@@ -70,7 +70,7 @@ function Projects() {
         <section className="md:mx-2 md:px-20 rounded-2xl transition-colors duration-500 overflow-hidden">
             <span id="proyectos"></span>
 
-            <motion.div 
+            <motion.div
                 className="w-full m-auto px-2"
                 variants={containerVariants}
                 initial="hidden"
@@ -78,22 +78,40 @@ function Projects() {
                 viewport={{ once: false, amount: 0.2 }}
             >
 
-                <div className="py-6">
-                    <motion.h2 
+                <div className="flex items-center gap-2 py-6 px-8">
+                    <motion.div variants={itemFadeUp} className='w-6 border border-black dark:border-white'></motion.div>
+                    <motion.h2
                         variants={itemFadeUp}
-                        className="text-4xl text-neutral-500 dark:text-neutral-100 md:text-7xl font-bold text-center"
+                        className=" text-neutral-500 dark:text-neutral-100 text-sm font-bold text-left uppercase"
                     >
                         {t("projects.title")}
                     </motion.h2>
                 </div>
 
+                <div className="flex items-center gap-2 py-6 px-8">
 
-                <motion.div 
+                    <motion.h2
+                        variants={itemFadeUp}
+                        className=" font-cormorant text-neutral-500 dark:text-neutral-100 text-7xl w-24"
+                    >
+                        {t("projects.subtitle")}
+                    </motion.h2>
+                </div>
+
+                <motion.p 
+                         variants={itemFadeUp}
+                className='w-3xl gap-2 py-2 px-8 text-lg sm:text-xl leading-relaxed '>
+                    {t("projects.description")}
+
+                </motion.p>
+
+
+                <motion.div
                     variants={itemFadeUp}
                     className="relative w-full px-4 md:px-8"
                 >
 
-                
+
                     <motion.button
                         onClick={goToPrev}
                         disabled={currentIndex === 0}
@@ -105,7 +123,7 @@ function Projects() {
                         <ChevronLeft className="w-6 h-6 text-neutral-700 dark:text-neutral-200" />
                     </motion.button>
 
-                    
+
                     <div className="overflow-hidden py-4" ref={carouselRef}>
                         <div
                             className="flex transition-transform duration-500 ease-in-out gap-2"
@@ -120,13 +138,13 @@ function Projects() {
                                     style={{
                                         width: `calc(${100 / itemsShown}% - ${(itemsShown - 1) * 16 / itemsShown}px)`
                                     }}
-                                    
+
                                     whileHover={{ y: -5 }}
                                     transition={{ type: "spring", stiffness: 300 }}
                                 >
                                     <div className="relative flex flex-col h-full justify-between w-full p-3 rounded-xl bg-neutral-100 dark:bg-neutral-900 border border-transparent dark:border-neutral-800 hover:border-neutral-200 dark:hover:border-neutral-700 transition-all shadow-sm">
-                                        
-                                   
+
+
                                         <div>
                                             <figure className="overflow-hidden rounded-xl h-[200px] w-full">
                                                 <img
@@ -160,11 +178,11 @@ function Projects() {
                                             </div>
                                         </div>
 
-                                
+
                                         <div className="px-3 pb-2 flex gap-3 mt-auto">
                                             {item?.github?.link && (
-                                                <motion.a 
-                                                    href={item?.github.link} 
+                                                <motion.a
+                                                    href={item?.github.link}
                                                     target='_blank'
                                                     whileHover={{ scale: 1.05 }}
                                                     whileTap={{ scale: 0.95 }}
@@ -175,8 +193,8 @@ function Projects() {
                                                 </motion.a>
                                             )}
                                             {item?.preview?.prevLink && (
-                                                <motion.a 
-                                                    href={item?.preview.prevLink} 
+                                                <motion.a
+                                                    href={item?.preview.prevLink}
                                                     target="_blank"
                                                     whileHover={{ scale: 1.05 }}
                                                     whileTap={{ scale: 0.95 }}
@@ -193,7 +211,7 @@ function Projects() {
                         </div>
                     </div>
 
-             
+
                     <motion.button
                         onClick={goToNext}
                         disabled={currentIndex === maxIndex}

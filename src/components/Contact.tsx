@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { motion,Variants } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import { FaGithub, FaLinkedin, FaDiscord } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 import logo from '../assets/images/mjbg.png';
@@ -8,7 +8,7 @@ function Contact() {
     const { t } = useTranslation();
 
 
-    const containerVariants:Variants = {
+    const containerVariants: Variants = {
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,
@@ -19,7 +19,7 @@ function Contact() {
         }
     };
 
-    const itemFadeUp:Variants = {
+    const itemFadeUp: Variants = {
         hidden: { y: 30, opacity: 0 },
         visible: {
             y: 0,
@@ -28,7 +28,7 @@ function Contact() {
         }
     };
 
-    const itemScale:Variants = {
+    const itemScale: Variants = {
         hidden: { scale: 0.8, opacity: 0 },
         visible: {
             scale: 1,
@@ -37,22 +37,42 @@ function Contact() {
         }
     };
 
+    const itemVariants: Variants = {
+        hidden: { y: 30, opacity: 0 },
+        visible: {
+            y: 0,
+            opacity: 1,
+            transition: { type: "spring", stiffness: 60, damping: 20 },
+        },
+    };
+
     return (
         <>
             <span id="contacto"></span>
 
-      
-            <section className="relative w-full mx-auto px-4 md:px-20 py-16 flex justify-center dark:bg-neutral-900 bg-neutral-50">
+
+            <section className="relative w-full mx-auto px-4 md:px-20 py-16 flex justify-center dark:bg-neutral-900 ">
                 <motion.div
                     className="w-full flex justify-center rounded-3xl bg-white dark:bg-neutral-950 py-12 md:py-16 px-6 md:px-8 text-center shadow-lg border border-neutral-200 dark:border-neutral-800"
                     variants={containerVariants}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: false, amount: 0.2 }} 
+                    viewport={{ once: false, amount: 0.2 }}
                 >
+
                     <div className="flex flex-col items-center justify-start space-y-8 w-full max-w-2xl">
 
-                  
+                        <motion.div
+                            variants={itemVariants}
+                            className="mx-auto md:mx-0 flex items-center justify-center  !backdrop-blur-xl border border-| bg-[#00ff8036] dark:bg-white dark:border-neutral-700 rounded-lg p-2"
+                        >
+                            <div className="w-[10px] h-[10px] rounded-full border  border-[#006e37] bg-[#006e37] mr-3 dot"></div>
+                            <p className="text-sm text-[#006e37] font-bold uppercase">
+                                Disponible para  proyectos
+                            </p>
+                        </motion.div>
+
+
                         <motion.div
                             variants={itemScale}
                             className="flex flex-col md:flex-row items-center gap-4"
@@ -69,27 +89,27 @@ function Contact() {
                             </div>
                         </motion.div>
 
-                        
+
                         <motion.div
                             variants={itemFadeUp}
-                            className="flex flex-col space-y-2"
+                            className=" flex flex-col space-y-2 font-cormorant text-7xl"
                         >
-                            <h3 className="text-3xl text-gray-900 capitalize font-light dark:text-white leading-tight">
-                                {t('contact.title')} <span className="text-[#00ec769a]">{t('contact.titleHighlight')}</span>
+                            <h3 className=" text-gray-900 capitalize font-light dark:text-white leading-tight">
+                                {t('contact.title')} <span className="text-[#05b45c9a]">{t('contact.titleHighlight')}</span>
                             </h3>
-                            <h4 className="text-xl md:text-2xl text-gray-500 dark:text-neutral-400">
+                            <h4 className=" md:text-2xl text-gray-500 dark:text-neutral-400">
                                 {t('contact.subtitle')}
                             </h4>
                         </motion.div>
 
-               
+
                         <motion.div variants={itemFadeUp}>
                             <p className="text-gray-600 md:w-full w-[330px] mx-auto dark:text-neutral-300 leading-relaxed">
                                 {t('contact.description')}
                             </p>
                         </motion.div>
 
-              
+
                         <motion.div
                             variants={itemFadeUp}
                             className="flex flex-wrap justify-center gap-4 pt-4"
@@ -132,9 +152,9 @@ function Contact() {
                 </motion.div>
             </section>
 
-     
+
             <footer className="w-full bg-white dark:bg-neutral-950 border-t border-neutral-200 dark:border-neutral-800">
-                <motion.div 
+                <motion.div
                     className="max-w-7xl mx-auto px-4 md:px-20 py-12"
                     variants={containerVariants}
                     initial="hidden"
@@ -143,7 +163,7 @@ function Contact() {
                 >
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
 
-                     
+
                         <motion.div variants={itemFadeUp} className="space-y-4">
                             <div className="flex items-center gap-3 ">
                                 <img src={logo} width={40} height={40} alt="logo" className="rounded-full bg-neutral-100" />
@@ -154,7 +174,7 @@ function Contact() {
                             </p>
                         </motion.div>
 
-                
+
                         <motion.div variants={itemFadeUp} className="space-y-4">
                             <h4 className="text-sm font-semibold uppercase tracking-wider text-neutral-900 dark:text-white">
                                 {t('footer.navigation')}
@@ -170,7 +190,7 @@ function Contact() {
                             </ul>
                         </motion.div>
 
-                    
+
                         <motion.div variants={itemFadeUp} className="space-y-4">
                             <h4 className="text-sm font-semibold uppercase tracking-wider text-neutral-900 dark:text-white">
                                 {t('footer.follow')}
@@ -197,8 +217,8 @@ function Contact() {
                         </motion.div>
                     </div>
 
-               
-                    <motion.div 
+
+                    <motion.div
                         variants={itemFadeUp}
                         className="mt-12 pt-8 border-t border-neutral-200 dark:border-neutral-800 text-center"
                     >

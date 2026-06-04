@@ -95,7 +95,8 @@ const resources = {
       // Projects Section
       projects: {
         title: "Proyectos",
-        description: "Proyectos destacados desarrollados con React, Framer Motion, React Router y Node.js. Cada aplicación combina interfaces dinámicas, animaciones fluidas y un backend robusto con Express",
+        subtitle: "Proyectos desarrollados",
+        description: "Esta es una selección de proyectos destacados que he desarrollado utilizando React, Framer Motion, React Router y Node.js. Cada proyecto combina interfaces dinámicas, animaciones fluidas para ofrecer experiencias web completas y atractivas.",
         otherProjects: "Otros proyectos",
         filters: {
           all: "Todos",
@@ -133,8 +134,8 @@ const resources = {
 
       // Contact Section
       contact: {
-        title: "Construyamos algo",
-        titleHighlight: "increíble",
+        title: "¿Estas buscando a alguien para construir algo",
+        titleHighlight: "increíble?",
         subtitle: "Escríbeme",
         description: "Software developer enfocado en Back-end capaz de llevar proyectos que permitan la entrega optimizada y continua a los usuarios.",
         role: "Analista de sistemas - Desarrollo Backend",

@@ -1,34 +1,37 @@
 import { useTranslation } from 'react-i18next';
-import { motion,Variants } from 'framer-motion';
-import { FaFilePdf } from 'react-icons/fa';
+import { motion, Variants } from 'framer-motion';
+import { FaDocker, FaFilePdf } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 import { FaGitAlt, FaJava } from 'react-icons/fa';
 import { SiNextdotjs, SiNestjs, SiMysql, SiMongodb } from 'react-icons/si';
 import { Tooltip, TooltipTrigger, TooltipContent } from '@/components/ui/tooltip';
+import { SiGnubash } from "react-icons/si";
 import { TextAnimate } from './ui/text-animate';
-import { Highlighter } from './ui/highlighter';
 import { GridPattern } from './ui/grid-pattern';
 import Type from './Type';
 import { cn } from '@/lib/utils';
 
-type techItem ={
+type techItem = {
   icon: React.ReactNode;
-  name:string
+  name: string
 }
 
 function Hero() {
   const { t } = useTranslation();
 
-  const techStack:techItem[] = [
+  const techStack: techItem[] = [
     { icon: <FaGitAlt className="text-4xl text-black dark:text-white" />, name: "Git" },
     { icon: <SiNextdotjs className="text-4xl text-black dark:text-white" />, name: "Next" },
     { icon: <SiNestjs className="text-4xl text-black dark:text-white" />, name: "Nestjs" },
+    { icon: <SiGnubash className="text-4xl text-black dark:text-white" />, name: "Bash" },
     { icon: <SiMysql className="text-4xl text-black dark:text-white" />, name: "MySQL" },
     { icon: <SiMongodb className="text-4xl text-black dark:text-white" />, name: "MongoDB" },
-    { icon: <FaJava className="text-4xl text-black dark:text-white" />, name: "Java" }
+    { icon: <FaJava className="text-4xl text-black dark:text-white" />, name: "Java" },
+    { icon: <FaDocker className="text-4xl text-black dark:text-white" />, name: "Docker" }
+
   ];
 
-  const containerVariants:Variants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -39,7 +42,7 @@ function Hero() {
     },
   };
 
-  const itemVariants:Variants = {
+  const itemVariants: Variants = {
     hidden: { y: 30, opacity: 0 },
     visible: {
       y: 0,
@@ -48,7 +51,7 @@ function Hero() {
     },
   };
 
-  const iconContainerVariants:Variants = {
+  const iconContainerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -58,17 +61,17 @@ function Hero() {
     },
   };
 
-  const iconVariants:Variants = {
+  const iconVariants: Variants = {
     hidden: { scale: 0, opacity: 0 },
-    visible: { 
-      scale: 1, 
+    visible: {
+      scale: 1,
       opacity: 1,
       transition: { type: "spring", stiffness: 200, damping: 15 }
     },
   };
 
   return (
-    <section className="relative bg-background flex size-full items-center justify-center overflow-hidden">
+    <section className="relative bg-background flex size-full items-center justify-center overflow-hidden pb-10">
       <GridPattern
         width={30}
         height={30}
@@ -80,29 +83,29 @@ function Hero() {
         )}
       />
 
-      <div className="md:h-screen w-full relative py-4 pt-4 md:pt-10">
-        <motion.div 
+      <div className="md:h-screen w-full relative py-p pt-4 md:pt-4">
+        <motion.div
           className="pt-18 px-15 grid grid-cols-1 justify-center mx-auto place-items-center relative z-10"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: false, amount: 0.2 }} 
+          viewport={{ once: false, amount: 0.2 }}
         >
           <div className="w-full grid grid-cols-1 place-items-center text-center">
-            
-         
-            <motion.div 
+
+
+            <motion.div
               variants={itemVariants}
-              className="mx-auto md:mx-0 flex items-center justify-start w-[300px] !backdrop-blur-xl border border-neutral-900 dark:border-neutral-700 rounded-lg px-2 py-1 my-5"
+              className="mx-auto md:mx-0 flex items-center justify-center w-[300px] !backdrop-blur-xl border border-| bg-[#00ff8036] dark:bg-white dark:border-neutral-700 rounded-lg p-1 my-8"
             >
-              <div className="w-[10px] h-[10px] rounded-full border border-[#00ec76] bg-[#00ec76] mr-3 dot"></div>
-              <p className="text-sm font-medium">
-                 {t('hero.available')}
+              <div className="w-[10px] h-[10px] rounded-full border  border-[#006e37] bg-[#006e37] mr-3 dot"></div>
+              <p className="text-[10px] text-[#006e37] font-bold uppercase">
+                {t('hero.available')}
               </p>
             </motion.div>
 
-          
-            <motion.div 
+
+            <motion.div
               variants={itemVariants}
               className="w-full mb-4 relative z-10 flex flex-col items-center justify-center"
             >
@@ -113,21 +116,21 @@ function Hero() {
               </h2>
 
               <div className="max-w-2xl text-lg sm:text-xl leading-relaxed transition-colors duration-300 px-4 sm:px-0 mt-4">
-                 <TextAnimate animation="blurIn" as="p">
-                    {t('hero.role')}
-                 </TextAnimate>
+                <TextAnimate animation="blurIn" as="p">
+                  {t('hero.role')}
+                </TextAnimate>
               </div>
             </motion.div>
 
-           
+
             <motion.div variants={itemVariants}>
-              <p className="mb-6 text-neutral-600 dark:text-white">
-                <Highlighter action="underline" color="#00ec76">
-                  {t('hero.techStack')}
-                </Highlighter>
+              <p className="mb-6 text-neutral-500 font-medium dark:text-white">
+
+                {t('hero.techStack')}
+
               </p>
 
-              <motion.div 
+              <motion.div
                 className="flex items-center space-x-3 flex-wrap justify-center gap-y-3"
                 variants={iconContainerVariants}
               >
@@ -146,14 +149,14 @@ function Hero() {
               </motion.div>
             </motion.div>
 
-          
-            <motion.div 
+
+            <motion.div
               variants={itemVariants}
-              className="flex flex-col md:flex-row justify-start items-start gap-4 sm:gap-6 mt-10 px-4 sm:px-0 py-2"
+              className="flex flex-col md:flex-row justify-start items-start gap-4 sm:gap-6 py-10 px-4 sm:px-0 "
             >
-              <motion.a 
-                href="/hv-juan.pdf" 
-                target="_blank" 
+              <motion.a
+                href="/hv-juan.pdf"
+                target="_blank"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="flex items-center gap-3 p-2 sm:p-3 rounded-xl shadow-lg backdrop-blur-md transition-all duration-300 border w-full sm:w-auto bg-black/4 dark:bg-white/10 border-white/10 text-white cursor-pointer"
@@ -168,8 +171,8 @@ function Hero() {
                 </div>
               </motion.a>
 
-              <motion.a 
-                href="#contacto" 
+              <motion.a
+                href="#contacto"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="flex items-center gap-3 p-2 sm:p-3 rounded-xl shadow-lg backdrop-blur-md transition-all border w-full sm:w-auto bg-black/4 dark:bg-white/10 border-white/10 text-white cursor-pointer"
