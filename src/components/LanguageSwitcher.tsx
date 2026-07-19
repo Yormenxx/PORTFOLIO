@@ -17,8 +17,8 @@ function LanguageSwitcher() {
       onClick={toggleLanguage}
    
     >
-      {/* <IoLanguage className="text-lg" /> */}
-      <span className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
+  
+      <span className="text-sm font-medium text-neutral-700 dark:text-neutral-300 cursor-pointer">
         {i18n.language === 'es' ? 'EN' : 'ES'}
       </span>
     </motion.button>

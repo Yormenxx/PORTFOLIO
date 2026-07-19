@@ -1,20 +1,25 @@
 import { TypeAnimation } from 'react-type-animation';
+import { useTranslation } from 'react-i18next';
 
 function Type() {
+  const { t, i18n } = useTranslation();
+
   return (
     <TypeAnimation
-      sequence={[ 
-        'Analista de sistemas',
+     
+      key={i18n.language} 
+      sequence={[
+        t('hero.analyst'), 
         1000,
-        'Desarrollo de software',
+        t('hero.developer'), 
         1000
       ]}
       wrapper="span"
       speed={40}
-      style={{  display: 'inline-block' }}
+      style={{ display: 'inline-block' }}
       repeat={Infinity}
     />
-  )
+  );
 }
 
-export default Type
+export default Type;

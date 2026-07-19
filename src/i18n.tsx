@@ -16,6 +16,8 @@ const resources = {
       // Hero Section
       hero: {
         available: "Disponible para nuevos proyectos",
+        analyst: "Analista de sistemas",
+        developer: "Desarrollo de software",
         role: "Analista y Desarrollador de sistemas de información y estudiante en formación de Ingeniería en Sistemas, tengo un enfoque en el desarrollo BackEnd pero también logro manejar tecnologías FrontEnd.",
         techStack: "Stack tecnológico",
         downloadCV: "Descargar CV",
@@ -168,6 +170,8 @@ const resources = {
       // Hero Section
       hero: {
         available: "Available for new projects",
+        analyst: "Systems Analyst",
+        developer: "Software Development",
         role: "Systems Analyst and Developer with a background in Information Systems Engineering, I have a focus on BackEnd development but also manage FrontEnd technologies.",
         techStack: "Tech Stack",
         downloadCV: "Download CV",

@@ -7,33 +7,31 @@ import Projects from "./components/Projects.tsx"
 import Contact from './components/Contact.tsx'
 import Footer from './components/Footer.tsx'
 import Transition from './components/Transition.tsx'
-import SecondaryProjects from './components/SecondaryProjects.tsx'
+
+
+
 
 function App() {
+
 
   return (
     <>
       <ReactLenis root>
-        <div>
-          <Transition />
-         
-          <Navbar />
+        <Transition />
+        <Navbar />
 
-        
-          <main id="main-content">
-            <Hero />
-            <Services />
-            <Projects />
-            {/* <SecondaryProjects /> */}
-            <Contact />
-          </main>
+        <main id="main-content">
+          <Hero />
+          <Services />
+          <Projects />
+          <Contact />
+        </main>
 
-          
-          <Footer />
-        </div>
-      </ReactLenis>
+        <Footer />
+    
+    </ReactLenis >
     </>
-  )
+  );
 }
 
 export default App
