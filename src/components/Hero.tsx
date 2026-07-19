@@ -70,7 +70,7 @@ function Hero() {
   };
 
   return (
-    <section className="relative bg-background flex size-full items-center justify-center overflow-hidden pb-10">
+    <section className="relative bg-background flex w-full items-center justify-center overflow-hidden pt-32 pb-20 md:pt-40 md:pb-24">
       <GridPattern
         width={30}
         height={30}
@@ -82,7 +82,7 @@ function Hero() {
         )}
       />
 
-      <div className="md:h-screen w-full relative pt-24 md:pt-4">
+      <div className="w-full relative">
         <motion.div
           className="px-6 md:px-15 grid grid-cols-1 justify-center mx-auto place-items-center relative z-10"
           variants={containerVariants}
