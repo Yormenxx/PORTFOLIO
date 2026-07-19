@@ -136,6 +136,7 @@ const resources = {
 
       // Contact Section
       contact: {
+        available:"Disponible para proyectos",
         title: "¿Estas buscando a alguien para construir algo",
         titleHighlight: "increíble?",
         subtitle: "Escríbeme",
@@ -251,6 +252,7 @@ const resources = {
       // Projects Section
       projects: {
         title: "Projects",
+        subtitle: "Developed projects",
         description: "Featured projects developed with React, Framer Motion, React Router and Node.js. Each application combines dynamic interfaces, smooth animations and a robust backend with Express",
         otherProjects: "Other projects",
         filters: {
@@ -289,6 +291,7 @@ const resources = {
 
       // Contact Section
       contact: {
+        available:"Available for projects",
         title: "Let's Build Something",
         titleHighlight: "Amazing",
         subtitle: "Write me",

@@ -69,7 +69,8 @@ function Contact() {
                                 <span className="relative inline-flex rounded-full h-2 w-2 bg-[#00c96b]"></span>
                             </span>
                             <p className="text-xs text-neutral-700 dark:text-neutral-300 font-semibold uppercase tracking-[0.12em]">
-                                Disponible para proyectos
+                                {t('contact.available')}
+
                             </p>
                         </motion.div>
 
