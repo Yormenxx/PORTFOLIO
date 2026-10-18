@@ -1,4 +1,4 @@
-
+import GlowCursor from './components/GlowCursor';
 import { ReactLenis } from 'lenis/react'
 import Hero from "./components/Hero.tsx"
 import Navbar from "./components/Navbar.tsx"
@@ -16,20 +16,38 @@ function App() {
 
   return (
     <>
-      <ReactLenis root>
-        <Transition />
-        <Navbar />
 
-        <main id="main-content">
-          <Hero />
-          <Services />
-          <Projects />
-          <Contact />
-        </main>
 
-        <Footer />
-    
-    </ReactLenis >
+      <GlowCursor
+        color="#10b981"
+        intensity={1.3}
+        trailWidth={3}
+        linger={1.4}
+        glow={1.2}
+        theme="dark"
+        clickBurst
+
+      >
+        <ReactLenis root>
+
+          <Transition />
+          <Navbar />
+
+          <main id="main-content">
+            <Hero />
+            <Services />
+            <Projects />
+            <Contact />
+          </main>
+
+          <Footer />
+        </ReactLenis >
+      </GlowCursor>
+
+
+
+
+
     </>
   );
 }

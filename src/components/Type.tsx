@@ -1,17 +1,12 @@
 import { TypeAnimation } from 'react-type-animation';
-import { useTranslation } from 'react-i18next';
 
 function Type() {
-  const { t, i18n } = useTranslation();
-
   return (
     <TypeAnimation
-     
-      key={i18n.language} 
       sequence={[
-        t('hero.analyst'), 
+        'Analista de sistemas', 
         1000,
-        t('hero.developer'), 
+        'Desarrollo de software', 
         1000
       ]}
       wrapper="span"

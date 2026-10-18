@@ -65,19 +65,16 @@ export const SERVICES_ITEMS = [
 
 
 
-export const getProjectsItems = (t: any) => [
-
+export const getProjectsItems = (_t?: any) => [
     {
         img: halo,
-        titleKey: "featuredProjects.halo.title",
-        title: t("featuredProjects.halo.title"),
+        title: "Halo web landing",
         skills: [
             { icon: <FaReact />, name: "React" },
             { icon: <RiTailwindCssFill />, name: "Tailwind" },
             { icon: <TbBrandFramerMotion />, name: "Framer motion" }
         ],
-        descriptionKey: "featuredProjects.halo.description",
-        description: t("featuredProjects.halo.description"),
+        description: "Este proyecto es una página web inspirada en Halo Master Chief, diseñada para ofrecer información detallada sobre el juego, noticias, guías y contenido multimedia. Con una interfaz dinámica y responsive, permite a los fans sumergirse en el universo de Halo de manera intuitiva y visualmente atractiva.",
         github: {
             git: <FaGithub />,
             link: "https://github.com/Yormenxx/projects-js-node-others/tree/main/HALO-WEB-LANDING"
@@ -89,15 +86,13 @@ export const getProjectsItems = (t: any) => [
     },
     {
         img: headphones,
-        titleKey: "featuredProjects.headphones.title",
-        title: t("featuredProjects.headphones.title"),
+        title: "Headphone landing",
         skills: [
             { icon: <FaReact />, name: "React" },
             { icon: <RiTailwindCssFill />, name: "Tailwind" },
             { icon: <TbBrandFramerMotion />, name: "Framer motion" }
         ],
-        descriptionKey: "featuredProjects.headphones.description",
-        description: t("featuredProjects.headphones.description"),
+        description: "Este proyecto es una Landing basa en la venta de audífonos, mostrando una galería visual con diseños y características. La interfaz minimalista y responsive facilita la exploración de diferentes modelos, ofreciendo una experiencia sencilla y atractiva para los usuarios.",
         github: {
             git: <FaGithub />,
             link: "https://github.com/Yormenxx/projects-js-node-others/tree/main/HEADPHONE-WEBSITE"
@@ -107,18 +102,15 @@ export const getProjectsItems = (t: any) => [
             prev: <FaArrowUpRightFromSquare />
         }
     },
-
     {
         img: sass,
-        titleKey: "featuredProjects.saas.title",
-        title: t("featuredProjects.saas.title"),
+        title: "SaaS landing page",
         skills: [
             { icon: <FaReact />, name: "React" },
             { icon: <RiTailwindCssFill />, name: "Tailwind" },
             { icon: <TbBrandFramerMotion />, name: "Framer motion" }
         ],
-        descriptionKey: "featuredProjects.saas.description",
-        description: t("featuredProjects.saas.description"),
+        description: "Este proyecto es un landing page para un SaaS, diseñado para destacar sus funciones, beneficios y características clave. Con un diseño moderno y responsive, la página combina llamadas a la acción efectivas y una presentación clara del producto, ideal para captar nuevos usuarios y generar conversiones.",
         github: {
             git: <FaGithub />,
             link: "https://github.com/Yormenxx/projects-js-node-others/tree/main/SAAS-LANDING-WEB"
@@ -128,18 +120,15 @@ export const getProjectsItems = (t: any) => [
             prev: <FaArrowUpRightFromSquare />
         }
     },
-
     {
         img: crypto,
-        titleKey: "featuredProjects.crypto.title",
-        title: t("featuredProjects.crypto.title"),
+        title: "Crypto landing page",
         skills: [
             { icon: <FaReact />, name: "React" },
             { icon: <RiTailwindCssFill />, name: "Tailwind" },
             { icon: <TbBrandFramerMotion />, name: "Framer motion" }
         ],
-        descriptionKey: "featuredProjects.crypto.description",
-        description: t("featuredProjects.crypto.description"),
+        description: "Este proyecto es una landing page dedicada a una plataforma de criptomonedas, diseñada para proporcionar información clara sobre sus servicios, características y beneficios. Con un diseño moderno y atractivo, la página busca captar la atención de los usuarios interesados en el mundo de las criptomonedas y fomentar la interacción con la plataforma.",
         github: {
             git: <FaGithub />,
             link: "https://github.com/Yormenxx/projects-js-node-others/tree/main/CRYPTO-LANDING"
@@ -151,13 +140,11 @@ export const getProjectsItems = (t: any) => [
     },
     {
         img: medic,
-        titleKey: "featuredProjects.medic.title",
-        title: t("featuredProjects.medic.title"),
+        title: "Medical landing page",
         skills: [
             { icon: <RiTailwindCssFill />, name: "Tailwind" },
         ],
-        descriptionKey: "featuredProjects.medic.description",
-        description: t("featuredProjects.medic.description"),
+        description: "Este proyecto es una landing page para un servicio médico, diseñada para ofrecer información clara sobre los servicios de salud disponibles, el equipo médico y las facilidades para los pacientes. Con un diseño limpio y profesional, la página busca generar confianza y facilitar la comunicación entre los pacientes y el centro médico.",
         github: {
             git: <FaGithub />,
             link: "https://github.com/Yormenxx/projects-js-node-others/tree/main/MEDIC-WEB"
@@ -169,15 +156,13 @@ export const getProjectsItems = (t: any) => [
     },
     {
         img: furniture,
-        titleKey: "featuredProjects.furniture.title",
-        title: t("featuredProjects.furniture.title"),
+        title: "Furniture landing page",
         skills: [
             { icon: <FaReact />, name: "React" },
             { icon: <RiTailwindCssFill />, name: "Tailwind" },
             { icon: <TbBrandFramerMotion />, name: "Framer motion" }
         ],
-        descriptionKey: "featuredProjects.furniture.description",
-        description: t("featuredProjects.furniture.description"),
+        description: "Este proyecto es una landing page para una tienda de muebles, diseñada para mostrar una variedad de productos y estilos . Con un diseño atractivo y fácil de navegar, la página permite a los usuarios explorar diferentes opciones de mobiliario y realizar compras de manera sencilla.",
         github: {
             git: <FaGithub />,
             link: "https://github.com/Yormenxx/projects-js-node-others/tree/main/LANDING-WEB-F"
@@ -187,17 +172,13 @@ export const getProjectsItems = (t: any) => [
             prev: <FaArrowUpRightFromSquare />
         }
     }
-
 ];
 
-
-
-export const otherProjects = (t: any) => [
+export const otherProjects = (_t?: any) => [
     {
         id: 1,
         name: "Modern restaurant",
-        // CORRECCIÓN: Usar t() aquí
-        description: t("otherProjects.modern.desc"), 
+        description: "Landing page basado en un restaurante moderno", 
         skill: [{ name: "react" }, { name: "tailwind" }, { name: "framer motion" }],
         link: "https://github.com/Yormenxx/projects-js-node-others/tree/main/MODERN-RESTAURANT",
         src: "source code",
@@ -206,7 +187,7 @@ export const otherProjects = (t: any) => [
     {
         id: 2,
         name: "Modern website ux/ui",
-        description: t("otherProjects.modernui.desc"),
+        description: "Landing page basado en un diseño ux/ui moderno",
         skill: [{ name: "react" }, { name: "tailwind" }],
         link: "https://github.com/Yormenxx/projects-js-node-others/tree/main/MODERN-WEBSITE-UX-UI",
         src: "source code",
@@ -215,7 +196,7 @@ export const otherProjects = (t: any) => [
     {
         id: 3,
         name: "Outdoor travel",
-        description: t("otherProjects.outer.desc"),
+        description: "Landing page basado en una web de viajes al aire libre",
         skill: [{ name: "react" }, { name: "tailwind" }],
         link: "https://github.com/Yormenxx/projects-js-node-others/tree/main/OUTDOOR-TRAVEL",
         src: "source code",
@@ -224,7 +205,7 @@ export const otherProjects = (t: any) => [
     {
         id: 4,
         name: "Saas landing page",
-        description: t("otherProjects.saaslanding.desc"),
+        description: "Saas landing page basado en un diseño moderno",
         skill: [{ name: "react" }, { name: "tailwind" }, { name: "framer motion" }],
         link: "https://github.com/Yormenxx/projects-js-node-others/tree/main/SAAS-LANDING-PAGE",
         src: "source code",
@@ -233,7 +214,7 @@ export const otherProjects = (t: any) => [
     {
         id: 5,
         name: "Trpc crud",
-        description: t("otherProjects.trpc.desc"),
+        description: "crud con tecnologias trpc",
         skill: [{ name: "react" }, { name: "tailwind" }, { name: "typescript" }, { name: "trpc" }],
         link: "https://github.com/Yormenxx/projects-js-node-others/tree/main/TRPC-CRUD",
         src: "source code",
@@ -242,7 +223,7 @@ export const otherProjects = (t: any) => [
     {
         id: 6,
         name: "ts-app-expenses",
-        description: t("otherProjects.expenses.desc"),
+        description: "Desarrollo de una mini aplicacion de gastos con typescript",
         skill: [{ name: "react" }, { name: "typescript" }, { name: "tailwind" }],
         link: "https://github.com/Yormenxx/projects-js-node-others/tree/main/TS-APP-EXPENSES",
         src: "source code",
@@ -251,7 +232,7 @@ export const otherProjects = (t: any) => [
     {
         id: 7,
         name: "Virtual landing",
-        description: t("otherProjects.virtual.desc"), 
+        description: "Desarrollo de una landing page moderna", 
         skill: [{ name: "react" }, { name: "tailwind" }],
         link: "https://github.com/Yormenxx/projects-js-node-others/tree/main/VIRTUAL-LANDING",
         src: "source code",
@@ -260,7 +241,7 @@ export const otherProjects = (t: any) => [
     {
         id: 8,
         name: "blog api",
-        description: t("otherProjects.blogapi.desc"),
+        description: "Deasrrollo basico de una rest api basada en blog",
         skill: [{ name: "nodejs" }, { name: "express" }, { name: "mongo" }],
         link: "https://github.com/Yormenxx/javascript-elements/tree/main/api_construction_projects/restapi_blog_users/backend",
         src: "source code",
@@ -269,7 +250,7 @@ export const otherProjects = (t: any) => [
     {
         id: 9,
         name: "Rest api 1",
-        description: t("otherProjects.rest1.desc"), 
+        description: "Practicando el desarrollo de apis", 
         skill: [{ name: "nodejs" }, { name: "express" }, { name: "mongo" }],
         link: "https://github.com/Yormenxx/javascript-elements/tree/main/api_construction_projects/restapibasic",
         src: "source code",
@@ -278,7 +259,7 @@ export const otherProjects = (t: any) => [
     {
         id: 10,
         name: "Rest api 2",
-        description: t("otherProjects.rest2.desc"),
+        description: "Desarrollo de una api",
         skill: [{ name: "nodejs" }, { name: "express" }, { name: "mongo" }],
         link: "https://github.com/Yormenxx/javascript-elements/tree/main/api_construction_projects/restapibasic1/backend",
         src: "source code",
@@ -287,7 +268,7 @@ export const otherProjects = (t: any) => [
     {
         id: 11,
         name: "Rest api 3",
-        description: t("otherProjects.rest3.desc"),
+        description: "rest api con typescript",
         skill: [{ name: "nodejs" }, { name: "express" }, { name: "mongo" }],
         link: "https://github.com/Yormenxx/javascript-elements/tree/main/api_construction_projects/restapiwithts",
         src: "source code",
@@ -296,7 +277,7 @@ export const otherProjects = (t: any) => [
     {
         id: 12,
         name: "Rick and Morty",
-        description: t("otherProjects.rick.desc"),
+        description: "Consumiento api de rick and morty",
         skill: [{ name: "nodejs" }, { name: "express" }, { name: "mongo" }],
         link: "https://github.com/Yormenxx/javascript-elements/tree/main/api_construction_projects/rickandmorty",
         src: "source code",
